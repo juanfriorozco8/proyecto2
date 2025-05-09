@@ -3,6 +3,7 @@ CREATE (D:Categoria {nombre: "Diseño Gráfico"})
 CREATE (E:Categoria {nombre: "Escritura Creativa"})
 CREATE (M:Categoria {nombre: "Música"})
 
+
 CREATE (F1:Curso {titulo: "fotos1"})
 CREATE (F2:Curso {titulo: "fotos2"})
 CREATE (F3:Curso {titulo: "fotos3"})
