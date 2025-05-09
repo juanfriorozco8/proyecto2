@@ -30,3 +30,35 @@ CREATE (M3:Curso {titulo: "musica3"})
 CREATE (M1)-[:PERTENECE_A]->(M)
 CREATE (M2)-[:PERTENECE_A]->(M)
 CREATE (M3)-[:PERTENECE_A]->(M)
+
+CREATE (juan:Usuario {nombre: "Juanito"})
+CREATE (mar:Usuario {nombre: "Mar"})
+CREATE (fran:Usuario {nombre: "Francisco"})
+
+CREATE (juan)-[:INTERESADO_EN]->(F)
+CREATE (juan)-[:INTERESADO_EN]->(M)
+
+CREATE (mar)-[:INTERESADO_EN]->(D)
+CREATE (mar)-[:INTERESADO_EN]->(E)
+
+CREATE (fran)-[:INTERESADO_EN]->(M)
+CREATE (fran)-[:INTERESADO_EN]->(E)
+
+
+CREATE (F)-[:SIMILAR {peso: 4}]->(E)
+CREATE (E)-[:SIMILAR {peso: 4}]->(F)
+
+CREATE (F)-[:SIMILAR {peso: 4}]->(D)
+CREATE (D)-[:SIMILAR {peso: 4}]->(F)
+
+CREATE (F)-[:SIMILAR {peso: 2}]->(M)
+CREATE (M)-[:SIMILAR {peso: 2}]->(F)
+
+CREATE (E)-[:SIMILAR {peso: 3}]->(M)
+CREATE (M)-[:SIMILAR {peso: 3}]->(E)
+
+CREATE (E)-[:SIMILAR {peso: 2}]->(D)
+CREATE (D)-[:SIMILAR {peso: 2}]->(E)
+
+CREATE (M)-[:SIMILAR {peso: 2}]->(D)
+CREATE (D)-[:SIMILAR {peso: 2}]->(M)
