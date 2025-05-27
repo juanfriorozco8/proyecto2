@@ -66,3 +66,43 @@ CREATE (F)-[:SIMILAR {peso: 2}]->(M)
 CREATE (E)-[:SIMILAR {peso: 3}]->(M)
 CREATE (E)-[:SIMILAR {peso: 2}]->(D)
 CREATE (M)-[:SIMILAR {peso: 2}]->(D)
+
+// 📌 CURSOS NUEVOS EN FOTOGRAFÍA Y MÚSICA PARA RECOMENDAR A JUANITO
+
+// Curso nuevo que Juanito NO ha tomado pero está en categoría que le interesa
+CREATE (F4:Curso {
+  idCurso: "F4", 
+  titulo: "Edición de fotos con Lightroom", 
+  duracion: "3h", 
+  dificultad: 2, 
+  contenido: "Edición digital de fotografías", 
+  fotoPresentacion: "url_foto4", 
+  acercaAutor: "Laura Gómez", 
+  fotos: ["img5"], 
+  fotoAutor: "url_autor1", 
+  popularidad: 95, 
+  rating: 4.4
+})-[:PERTENECE_A]->(F)
+CREATE (a1)-[:IMPARTIO]->(F4)
+
+// Curso nuevo en música que Juanito no ha tomado
+CREATE (M4:Curso {
+  idCurso: "M4", 
+  titulo: "Grabación en estudio casero", 
+  duracion: "2.5h", 
+  dificultad: 2, 
+  contenido: "Técnicas básicas de grabación", 
+  fotoPresentacion: "url_m4", 
+  acercaAutor: "Carlos Méndez", 
+  fotos: [], 
+  fotoAutor: "url_autor4", 
+  popularidad: 88, 
+  rating: 4.5
+})-[:PERTENECE_A]->(M)
+CREATE (a4)-[:IMPARTIO]->(M4)
+
+// Simulamos que otros usuarios han tomado estos cursos, para darles popularidad
+MATCH (mar:Usuario {usuario: "mar"}), (fran:Usuario {usuario: "fran"})
+MATCH (c1:Curso {idCurso: "F4"}), (c2:Curso {idCurso: "M4"})
+CREATE (mar)-[:TOMO]->(c1)
+CREATE (fran)-[:TOMO]->(c2)

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "CURS001",
+    "titulo": "Fotografía Creativa",
+    "categoria": "Fotografía",
+    "dificultad": "Intermedio",
+    "duracion": "6h",
+    "contenido": "Técnicas de iluminación, composición y edición.",
+    "fotos": ["fotografia1.jpg", "fotografia2.jpg"],
+    "autor_id": "A1"
+  },
+  {
+    "id": "CURS002",
+    "titulo": "Diseño Gráfico Básico",
+    "categoria": "Diseño Gráfico",
+    "dificultad": "Principiante",
+    "duracion": "5h",
+    "contenido": "Fundamentos de color, tipografía y herramientas de diseño.",
+    "fotos": ["diseno1.jpg"],
+    "autor_id": "A2"
+  }
+]

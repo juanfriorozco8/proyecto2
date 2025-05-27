@@ -1,0 +1,14 @@
+[
+  {
+    "id": "A1",
+    "nombre": "Laura Gómez",
+    "biografia": "Fotógrafa profesional con 10 años de experiencia.",
+    "foto": "laura.jpg"
+  },
+  {
+    "id": "A2",
+    "nombre": "Pedro Ruiz",
+    "biografia": "Diseñador UX/UI y animador digital.",
+    "foto": "pedro.jpg"
+  }
+]
