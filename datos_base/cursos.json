@@ -1,22 +1,22 @@
 [
   {
-    "id": "CURS001",
-    "titulo": "Fotografía Creativa",
+    "id": "F1",
+    "titulo": "Fotografía Digital para Principiantes",
     "categoria": "Fotografía",
-    "dificultad": "Intermedio",
-    "duracion": "6h",
-    "contenido": "Técnicas de iluminación, composición y edición.",
-    "fotos": ["fotografia1.jpg", "fotografia2.jpg"],
-    "autor_id": "A1"
+    "dificultad": "Básico",
+    "duracion": "4h",
+    "contenido": "Aprende los fundamentos de la fotografía digital.",
+    "foto": "url_foto_f1",
+    "autor_id": "a1"
   },
   {
-    "id": "CURS002",
-    "titulo": "Diseño Gráfico Básico",
+    "id": "D1",
+    "titulo": "Diseño Gráfico con Illustrator",
     "categoria": "Diseño Gráfico",
-    "dificultad": "Principiante",
-    "duracion": "5h",
-    "contenido": "Fundamentos de color, tipografía y herramientas de diseño.",
-    "fotos": ["diseno1.jpg"],
-    "autor_id": "A2"
+    "dificultad": "Intermedio",
+    "duracion": "6h",
+    "contenido": "Domina herramientas de diseño vectorial.",
+    "foto": "url_foto_d1",
+    "autor_id": "a2"
   }
 ]

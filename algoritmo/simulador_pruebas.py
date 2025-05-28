@@ -1,26 +1,31 @@
-from utilidades_grafo import ConexionNeo4j
-from recomendador import RecomendadorCursos
+# algoritmo/simulador_pruebas.py
+
+from utilidades_grafo import Neo4jConnector
+from recomendador import recomendar_cursos
 
 def main():
-    uri = "neo4j+s://1d3d3e94.databases.neo4j.io"
-    user = "<neo4j>"
-    password = "<vm_35vlz7rro0KyZfLEncx_Zzbr-8OJMp8kw5IG1Yww>"
+    # Configura tu conexión a Neo4j
+    neo4j = Neo4jConnector(
+        uri="bolt://localhost:7687",
+        user="neo4j",
+        password="password"  # cámbialo si es necesario
+    )
 
-    conexion = ConexionNeo4j(uri, user, password)
+    # ID del usuario a testear
+    usuario_id = "u1"  # debe existir en la base con nodos conectados
 
-    try:
-        recomendador = RecomendadorCursos(conexion)
-        username = input("🔑 Ingresa el nombre de usuario: ")
-        recomendaciones = recomendador.recomendar_para_usuario(username)
+    print(f"\n🔍 Recomendaciones para el usuario '{usuario_id}':\n")
 
-        if recomendaciones:
-            print(f"\n Recomendaciones para {username}:")
-            for curso in recomendaciones:
-                print(f"- {curso['titulo']} | Categoría: {curso['categoria']} |  {curso['rating']}")
-        else:
-            print( "No se encontraron cursos recomendados.")
-    finally:
-        conexion.cerrar()
+    recomendaciones = recomendar_cursos(neo4j, usuario_id)
+
+    if recomendaciones:
+        for r in recomendaciones:
+            print(f"📚 {r['titulo']} — Score: {round(r['score_total'], 2)}")
+    else:
+        print("⚠️ No se encontraron recomendaciones. Verifica los datos.")
+
+    # Cerrar conexión
+    neo4j.cerrar()
 
 if __name__ == "__main__":
     main()

@@ -1,29 +1,47 @@
-from neo4j import GraphDatabase
-import json
+# registrar_interaccion.py
 
-# Conexión
-driver = GraphDatabase.driver("neo4j+s://<tu_uri>", auth=("neo4j", "<tu_password>"))
+from algoritmo.utilidades_grafo import conectar_db
 
-# Cargar pesos
-with open("relaciones_interacciones/pesos_relaciones.json") as f:
-    PESOS = json.load(f)
+def registrar_interaccion(usuario, curso, tipo_interaccion, valor=None):
+    """
+    Registra una interacción de un usuario con un curso.
+    tipo_interaccion: 'like', 'dislike', 'inscripcion', 'rating', 'completado'
+    valor: solo aplica a 'rating', es la calificación (1-5)
+    """
+    db = conectar_db()
+    query = ""
 
-def registrar_like(usuario_id, curso_id):
-    with driver.session() as session:
-        session.run("""
-            MATCH (u:Usuario {id: $usuario_id}), (c:Curso {idCurso: $curso_id})
+    if tipo_interaccion == "like":
+        query = f'''
+            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
             MERGE (u)-[r:LIKE]->(c)
-            SET r.peso = $peso
-        """, usuario_id=usuario_id, curso_id=curso_id, peso=PESOS["CURSO_LIKEADO"])
+            ON CREATE SET r.peso = 1
+            ON MATCH SET r.peso = r.peso + 1
+        '''
+    elif tipo_interaccion == "dislike":
+        query = f'''
+            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
+            MERGE (u)-[r:DISLIKE]->(c)
+            ON CREATE SET r.peso = 1
+            ON MATCH SET r.peso = r.peso + 1
+        '''
+    elif tipo_interaccion == "inscripcion":
+        query = f'''
+            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
+            MERGE (u)-[:INSCRITO_EN]->(c)
+        '''
+    elif tipo_interaccion == "completado":
+        query = f'''
+            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
+            MERGE (u)-[:COMPLETO]->(c)
+            DELETE (u)-[:INSCRITO_EN]->(c)
+        '''
+    elif tipo_interaccion == "rating" and valor is not None:
+        query = f'''
+            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
+            MERGE (u)-[r:RATED]->(c)
+            SET r.valor = {valor}
+        '''
 
-def registrar_inscripcion(usuario_id, curso_id):
-    with driver.session() as session:
-        session.run("""
-            MATCH (u:Usuario {id: $usuario_id}), (c:Curso {idCurso: $curso_id})
-            MERGE (u)-[r:INSCRITO]->(c)
-            SET r.peso = $peso
-        """, usuario_id=usuario_id, curso_id=curso_id, peso=PESOS["CURSO_INSCRITO"])
-
-# Agrega más funciones según la interacción
-
-driver.close()
+    if query:
+        db.run(query)
