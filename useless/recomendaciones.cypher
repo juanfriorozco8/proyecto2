@@ -1,5 +1,5 @@
 
-MATCH (u:Usuario {usuario: $usuario})
+//MATCH (u:Usuario {usuario: usuario})
 MATCH (u)-[:INTERESADO_EN]->(cat1:Categoria)
 OPTIONAL MATCH (cat1)-[sim:SIMILAR]->(cat2:Categoria)
 WITH u, cat1, collect(DISTINCT cat2) + cat1 AS categoriasRelevantes
