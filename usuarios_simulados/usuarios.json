@@ -1,43 +1,14 @@
 [
   {
-    "idUsuario": "u1",
-    "nombre": "Mariana Orozco",
-    "email": "mariana@example.com",
-    "usuario": "mariana123",
-    "contrasena": "contrasena1",
-    "intereses": ["Fotografía", "Cocina", "Diseño Gráfico"]
+    "username": "mari123",
+    "correo": "mari@example.com",
+    "contrasena": "12345",
+    "intereses": ["Fotografía"]
   },
   {
-    "idUsuario": "u2",
-    "nombre": "Luis Ramírez",
-    "email": "luis@example.com",
-    "usuario": "luisnutri",
-    "contrasena": "nutri456",
-    "intereses": ["Nutrición", "Salud", "Crecimiento Personal"]
-  },
-  {
-    "idUsuario": "u3",
-    "nombre": "Andrea López",
-    "email": "andrea@example.com",
-    "usuario": "andreailustra",
-    "contrasena": "creativa17",
-    "intereses": ["Animación", "Ilustración", "Edición de Video"]
-  },
-  {
-    "idUsuario": "u4",
-    "nombre": "Carlos Méndez",
-    "email": "carlos@example.com",
-    "usuario": "carlomusic",
-    "contrasena": "melodia2025",
-    "intereses": ["Música", "Composición", "Producción Musical"]
-  },
-  {
-    "idUsuario": "u5",
-    "nombre": "Valery Ramos",
-    "email": "valery@example.com",
-    "usuario": "valgraph",
-    "contrasena": "123visual",
-    "intereses": ["Diseño Gráfico", "UX", "Pinterest"]
+    "username": "juanito",
+    "correo": "juan@example.com",
+    "contrasena": "abcde",
+    "intereses": ["Diseño Gráfico"]
   }
 ]
-

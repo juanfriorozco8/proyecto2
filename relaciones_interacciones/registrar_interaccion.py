@@ -1,47 +1,26 @@
-# registrar_interaccion.py
+import json
+from algoritmo.utilidades_grafo import get_driver
 
-from algoritmo.utilidades_grafo import conectar_db
+def registrar_interacciones():
+    driver = get_driver()
+    with open("usuarios_simulados/usuarios.json", "r", encoding="utf-8") as f:
+        usuarios = json.load(f)
 
-def registrar_interaccion(usuario, curso, tipo_interaccion, valor=None):
-    """
-    Registra una interacción de un usuario con un curso.
-    tipo_interaccion: 'like', 'dislike', 'inscripcion', 'rating', 'completado'
-    valor: solo aplica a 'rating', es la calificación (1-5)
-    """
-    db = conectar_db()
-    query = ""
+    with driver.session() as session:
+        for usuario in usuarios:
+            session.run(
+                "MERGE (u:Usuario {username: $username, correo: $correo, contrasena: $contrasena})",
+                username=usuario["username"],
+                correo=usuario["correo"],
+                contrasena=usuario["contrasena"]
+            )
+            for interes in usuario["intereses"]:
+                session.run(
+                    "MATCH (u:Usuario {username: $username}), (c:Categoria {nombre: $interes}) "
+                    "MERGE (u)-[:INTERESADO_EN]->(c)",
+                    username=usuario["username"],
+                    interes=interes
+                )
 
-    if tipo_interaccion == "like":
-        query = f'''
-            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
-            MERGE (u)-[r:LIKE]->(c)
-            ON CREATE SET r.peso = 1
-            ON MATCH SET r.peso = r.peso + 1
-        '''
-    elif tipo_interaccion == "dislike":
-        query = f'''
-            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
-            MERGE (u)-[r:DISLIKE]->(c)
-            ON CREATE SET r.peso = 1
-            ON MATCH SET r.peso = r.peso + 1
-        '''
-    elif tipo_interaccion == "inscripcion":
-        query = f'''
-            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
-            MERGE (u)-[:INSCRITO_EN]->(c)
-        '''
-    elif tipo_interaccion == "completado":
-        query = f'''
-            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
-            MERGE (u)-[:COMPLETO]->(c)
-            DELETE (u)-[:INSCRITO_EN]->(c)
-        '''
-    elif tipo_interaccion == "rating" and valor is not None:
-        query = f'''
-            MATCH (u:Usuario {{usuario: "{usuario}"}}), (c:Curso {{idCurso: "{curso}"}})
-            MERGE (u)-[r:RATED]->(c)
-            SET r.valor = {valor}
-        '''
-
-    if query:
-        db.run(query)
+if __name__ == "__main__":
+    registrar_interacciones()

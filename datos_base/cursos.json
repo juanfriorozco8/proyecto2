@@ -1,22 +1,22 @@
 [
   {
-    "id": "F1",
-    "titulo": "Fotografía Digital para Principiantes",
+    "idCurso": "C1",
+    "titulo": "Fotografía Digital",
     "categoria": "Fotografía",
-    "dificultad": "Básico",
-    "duracion": "4h",
-    "contenido": "Aprende los fundamentos de la fotografía digital.",
-    "foto": "url_foto_f1",
-    "autor_id": "a1"
+    "dificultad": "Intermedio",
+    "duracion": "5h",
+    "contenido": "Aprende técnicas de fotografía con DSLR.",
+    "fotos": ["foto1.jpg", "foto2.jpg"],
+    "autor": "A1"
   },
   {
-    "id": "D1",
-    "titulo": "Diseño Gráfico con Illustrator",
+    "idCurso": "C2",
+    "titulo": "Diseño UX/UI",
     "categoria": "Diseño Gráfico",
-    "dificultad": "Intermedio",
-    "duracion": "6h",
-    "contenido": "Domina herramientas de diseño vectorial.",
-    "foto": "url_foto_d1",
-    "autor_id": "a2"
+    "dificultad": "Avanzado",
+    "duracion": "8h",
+    "contenido": "Diseña interfaces atractivas y funcionales.",
+    "fotos": ["ux1.jpg", "ux2.jpg"],
+    "autor": "A2"
   }
 ]

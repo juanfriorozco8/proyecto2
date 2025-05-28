@@ -1,14 +1,14 @@
 [
   {
-    "id": "a1",
+    "idAutor": "A1",
     "nombre": "Laura Gómez",
     "bio": "Fotógrafa profesional con 10 años de experiencia.",
-    "foto": "url_autor1"
+    "foto": "laura.jpg"
   },
   {
-    "id": "a2",
+    "idAutor": "A2",
     "nombre": "Pedro Ruiz",
     "bio": "Diseñador UX/UI y animador digital.",
-    "foto": "url_autor2"
+    "foto": "pedro.jpg"
   }
 ]

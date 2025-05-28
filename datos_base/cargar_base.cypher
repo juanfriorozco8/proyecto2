@@ -1,20 +1,17 @@
-// Crear Categorías
-MERGE (:Categoria {nombre: "Fotografía"});
-MERGE (:Categoria {nombre: "Diseño Gráfico"});
+// Script base para crear nodos
+CREATE (f:Categoria {nombre: "Fotografía"});
+CREATE (d:Categoria {nombre: "Diseño Gráfico"});
 
-// Crear Autores
-MERGE (a1:Autor {id: "a1", nombre: "Laura Gómez", bio: "Fotógrafa profesional con 10 años de experiencia.", foto: "url_autor1"});
-MERGE (a2:Autor {id: "a2", nombre: "Pedro Ruiz", bio: "Diseñador UX/UI y animador digital.", foto: "url_autor2"});
+CREATE (a1:Autor {id: "A1", nombre: "Laura Gómez", bio: "Fotógrafa profesional", foto: "laura.jpg"});
+CREATE (a2:Autor {id: "A2", nombre: "Pedro Ruiz", bio: "Diseñador UX/UI", foto: "pedro.jpg"});
 
-// Crear Cursos y relacionarlos
-MERGE (c1:Curso {id: "F1", titulo: "Fotografía Digital para Principiantes", dificultad: "Básico", duracion: "4h", contenido: "Aprende los fundamentos de la fotografía digital.", foto: "url_foto_f1"})
-MERGE (cat1:Categoria {nombre: "Fotografía"})
-MERGE (a1:Autor {id: "a1"})
-MERGE (c1)-[:PERTENECE_A]->(cat1)
-MERGE (a1)-[:IMPARTE]->(c1)
+CREATE (c1:Curso {id: "C1", titulo: "Fotografía Digital", dificultad: "Intermedio", duracion: "5h", contenido: "Aprende fotografía", fotos: ["foto1.jpg", "foto2.jpg"]});
+CREATE (c2:Curso {id: "C2", titulo: "Diseño UX/UI", dificultad: "Avanzado", duracion: "8h", contenido: "Diseña interfaces", fotos: ["ux1.jpg", "ux2.jpg"]});
 
-MERGE (c2:Curso {id: "D1", titulo: "Diseño Gráfico con Illustrator", dificultad: "Intermedio", duracion: "6h", contenido: "Domina herramientas de diseño vectorial.", foto: "url_foto_d1"})
-MERGE (cat2:Categoria {nombre: "Diseño Gráfico"})
-MERGE (a2:Autor {id: "a2"})
-MERGE (c2)-[:PERTENECE_A]->(cat2)
-MERGE (a2)-[:IMPARTE]->(c2)
+MATCH (c:Curso {id: "C1"}), (a:Autor {id: "A1"}), (cat:Categoria {nombre: "Fotografía"})
+CREATE (a)-[:CREO]->(c)
+CREATE (c)-[:PERTENECE_A]->(cat);
+
+MATCH (c:Curso {id: "C2"}), (a:Autor {id: "A2"}), (cat:Categoria {nombre: "Diseño Gráfico"})
+CREATE (a)-[:CREO]->(c)
+CREATE (c)-[:PERTENECE_A]->(cat);
