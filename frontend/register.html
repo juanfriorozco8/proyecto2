@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro | Recomendador de Cursos</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Crear cuenta</h1>
+
+    <form id="registroForm">
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario" required>
+
+      <label for="correo">Correo</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" name="contrasena" required>
+
+      <p>Selecciona tus intereses:</p>
+      <div class="checkboxes">
+        <label><input type="checkbox" name="intereses" value="Fotografía"> Fotografía</label>
+        <label><input type="checkbox" name="intereses" value="Música"> Música</label>
+        <label><input type="checkbox" name="intereses" value="Diseño Gráfico"> Diseño Gráfico</label>
+        <label><input type="checkbox" name="intereses" value="Escritura Creativa"> Escritura Creativa</label>
+        <label><input type="checkbox" name="intereses" value="Programación"> Programación</label>
+      </div>
+
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <p id="mensaje" class="mensaje"></p>
+  </div>
+
+  <script src="js/register.js"></script>
+</body>
+</html>

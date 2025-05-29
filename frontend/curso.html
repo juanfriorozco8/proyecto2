@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalle del Curso</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="tituloCurso">Curso</h1>
+    <img id="fotoCurso" src="" alt="Imagen del curso" style="max-width: 300px;"/>
+    <p><strong>Categoría:</strong> <span id="categoria"></span></p>
+    <p><strong>Dificultad:</strong> <span id="dificultad"></span></p>
+    <p><strong>Duración:</strong> <span id="duracion"></span></p>
+    <p><strong>Contenido:</strong> <span id="contenido"></span></p>
+
+    <h3>Autor</h3>
+    <p><strong>Nombre:</strong> <span id="autorNombre"></span></p>
+    <p><strong>Bio:</strong> <span id="autorBio"></span></p>
+    <img id="autorFoto" src="" alt="Foto del autor" style="max-width: 150px;"/>
+
+    <br><br>
+    <button id="btnInscribir">Inscribirme</button>
+    <button onclick="calificar('like')">👍 Me gusta</button>
+    <button onclick="calificar('dislike')">👎 No me gusta</button>
+
+    <p id="mensaje"></p>
+  </div>
+
+  <script src="js/curso.js"></script>
+</body>
+</html>

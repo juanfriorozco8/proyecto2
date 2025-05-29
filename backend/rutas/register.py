@@ -11,39 +11,40 @@ def registrar_usuario():
     username = data.get("usuario")
     contrasena = data.get("contrasena")
     correo = data.get("correo")
-    intereses = data.get("intereses", [])  # lista de nombres de categorías
+    intereses = data.get("intereses", [])
 
     if not username or not contrasena or not correo:
         return jsonify({"error": "Faltan campos obligatorios"}), 400
 
     with driver.session() as session:
-        # Verifica si ya existe un usuario con ese username
-        consulta_existencia = """
+        # Verificar si el usuario ya existe
+        existe_query = """
         MATCH (u:Usuario {usuario: $username})
         RETURN u
         """
-        resultado = session.run(consulta_existencia, username=username)
-        if resultado.single():
+        if session.run(existe_query, username=username).single():
             return jsonify({"error": "El nombre de usuario ya existe"}), 409
 
-        # Crea el nodo de usuario
-        crear_usuario = """
+        # Crear el usuario
+        crear_query = """
         CREATE (u:Usuario {
             usuario: $username,
             contrasena: $contrasena,
             correo: $correo
         })
         """
-        session.run(crear_usuario, username=username, contrasena=contrasena, correo=correo)
+        session.run(crear_query, username=username, contrasena=contrasena, correo=correo)
 
-        # Crea relaciones de interés a categorías
+        # Conectar usuario con categorías (insensible a capitalización)
         for categoria in intereses:
-            relacion = """
+            relacion_query = """
             MATCH (u:Usuario {usuario: $username})
-            MATCH (c:Categoria {nombre: $categoria})
+            MATCH (c:Categoria)
+            WHERE toLower(c.nombre) = toLower($categoria)
             MERGE (u)-[:INTERESADO_EN]->(c)
             """
-            session.run(relacion, username=username, categoria=categoria)
+            session.run(relacion_query, username=username, categoria=categoria)
 
     return jsonify({"mensaje": "Usuario registrado correctamente"}), 201
+
 
