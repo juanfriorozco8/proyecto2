@@ -1,10 +1,14 @@
+import os
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
 
-# URI de conexión a Aura
-URI = "neo4j+s://1d3d3e94.databases.neo4j.io"
-USER = "neo4j"
-PASSWORD = "vm_35vlz7rro0KyZfLEncx_Zzbr-8OJMp8kw5IG1Yww"
+# Cargar las variables del archivo .env para proteger la información de la base de datos
+load_dotenv()
 
-# Devuelve una instancia del driver de Neo4j
+URI = os.getenv("NEO4J_URI")
+USER = os.getenv("NEO4J_USER")
+PASSWORD = os.getenv("NEO4J_PASSWORD")
+
 def get_driver():
     return GraphDatabase.driver(URI, auth=(USER, PASSWORD))
+

@@ -1,0 +1,6 @@
+# Informacion de la base de datos
+.env
+*.env
+
+# Archivos de sistema
+.DS_Store
