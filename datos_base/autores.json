@@ -13,5 +13,40 @@
     "nombre": "María Gómez",
     "biografia": "Chef profesional especializada en cocina internacional.",
     "foto": "https://i.pravatar.cc/150?img=3"
+  },
+  {
+    "nombre": "Luis Martínez",
+    "biografia": "Diseñador gráfico y artista digital con más de 8 años de experiencia.",
+    "foto": "https://i.pravatar.cc/150?img=4"
+  },
+  {
+    "nombre": "Sofía Ramírez",
+    "biografia": "Especialista en marketing digital para pequeñas y medianas empresas.",
+    "foto": "https://i.pravatar.cc/150?img=5"
+  },
+  {
+    "nombre": "David Herrera",
+    "biografia": "Ingeniero en sistemas con enfoque en bases de datos y optimización.",
+    "foto": "https://i.pravatar.cc/150?img=6"
+  },
+  {
+    "nombre": "Clara Gómez",
+    "biografia": "Productora musical y DJ con experiencia internacional.",
+    "foto": "https://i.pravatar.cc/150?img=7"
+  },
+  {
+    "nombre": "Juan Pérez",
+    "biografia": "Instructor certificado de yoga y bienestar holístico.",
+    "foto": "https://i.pravatar.cc/150?img=8"
+  },
+  {
+    "nombre": "Elena Castillo",
+    "biografia": "Escritora y tallerista literaria con varias publicaciones.",
+    "foto": "https://i.pravatar.cc/150?img=9"
+  },
+  {
+    "nombre": "Roberto Sánchez",
+    "biografia": "Ingeniero electrónico y apasionado maker con proyectos en Arduino.",
+    "foto": "https://i.pravatar.cc/150?img=10"
   }
 ]

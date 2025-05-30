@@ -28,5 +28,76 @@
     "autor": "María Gómez",
     "foto": "https://picsum.photos/200/300?random=3",
     "etiquetas": ["Cocina"]
+  },
+
+  {
+    "titulo": "Introducción a la Ilustración Digital",
+    "categoria": "Diseño",
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Conceptos básicos de ilustración digital y uso de tabletas gráficas.",
+    "autor": "Luis Martínez",
+    "foto": "https://picsum.photos/200/300?random=4",
+    "etiquetas": ["Diseño"]
+  },
+  {
+    "titulo": "Marketing Digital para Emprendedores",
+    "categoria": "Marketing",
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Estrategias para aumentar la presencia online y ventas digitales.",
+    "autor": "Sofía Ramírez",
+    "foto": "https://picsum.photos/200/300?random=5",
+    "etiquetas": ["Marketing"]
+  },
+  {
+    "titulo": "Bases de Datos con SQL",
+    "categoria": "Programación",
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Modelado, consultas básicas y avanzadas en SQL.",
+    "autor": "David Herrera",
+    "foto": "https://picsum.photos/200/300?random=6",
+    "etiquetas": ["Programación"]
+  },
+  {
+    "titulo": "Producción Musical con Ableton Live",
+    "categoria": "Música",
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Técnicas de producción, mezcla y mastering con Ableton.",
+    "autor": "Clara Gómez",
+    "foto": "https://picsum.photos/200/300?random=7",
+    "etiquetas": ["Música"]
+  },
+  {
+    "titulo": "Yoga para Principiantes",
+    "categoria": "Salud y Bienestar",
+    "dificultad": "Principiante",
+    "duracion": "3 horas",
+    "contenido": "Posturas básicas, respiración y meditación para empezar en yoga.",
+    "autor": "Juan Pérez",
+    "foto": "https://picsum.photos/200/300?random=8",
+    "etiquetas": ["Salud y Bienestar"]
+  },
+  {
+    "titulo": "Taller de Escritura Creativa",
+    "categoria": "Literatura",
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Desarrollo de técnicas para mejorar la narrativa y estilo personal.",
+    "autor": "Elena Castillo",
+    "foto": "https://picsum.photos/200/300?random=9",
+    "etiquetas": ["Literatura"]
+  },
+  {
+    "titulo": "Electrónica Básica para Makers",
+    "categoria": "Tecnología",
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Fundamentos de circuitos, sensores y microcontroladores.",
+    "autor": "Roberto Sánchez",
+    "foto": "https://picsum.photos/200/300?random=10",
+    "etiquetas": ["Tecnología"]
   }
 ]
