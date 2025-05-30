@@ -21,16 +21,15 @@
     <div class="login_der">
         <h2>Bienvenido de nuevo</h2>
         <h1>Inicia Sesión</h1>
-        <form id="formLogin">
             <div class="login_boton">
+                <form id="formLogin">
                 <h2>Usuario</h2>
                 <input class= "ingreso" type="text" placeholder="Escribe acá" id="usuario" required><br>
                 <h2>Contraseña</h2>
                 <input class= "ingreso" type="password" placeholder="Escribe acá" id="contrasena" required><br>
-                <input class ="next" type="submit" value="Entrar">
+                </form>
+                <input class ="next" type="submit" value="Next  -->">
             </div>
-            
-        </form>
         <p class="go_register">¿No tienes cuenta? <a class="go_register" href="/register">Regístrate aquí</a></p>
         <script src="{{ url_for('static', filename='js/login.js') }}"></script>
     </div>

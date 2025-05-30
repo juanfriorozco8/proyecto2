@@ -24,7 +24,7 @@ h2{
     font-weight: lighter;
 }
 
-.container_login{
+.container_login, .container_reg{
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -32,7 +32,7 @@ h2{
     background-color: rgb(199, 255, 255);
 }
 
-.login_izq{
+.login_izq,.reg_izq{
     width: 55%;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ img{
     font-size: 150%;
 }
 
-.login_der{
+.login_der, .reg_der{
     justify-content: center;
     align-items: center;
     width: 45%;
@@ -72,19 +72,21 @@ img{
     padding: 5%;  
 }
 .login_boton{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15%;
+    margin-top: 7%;
     padding: 0;
 }
 
 .next{
-    font-size: 135%;
+    font-size: 100%;
     border-color: #FF4848;
     font-weight: bolder;
     margin-top: 30%;
     margin: 15%;
-    padding: 5%;
+    margin-left: 0;
+
+    padding: 7%;
+    padding-right: 13%;
+    padding-bottom: 0;
     color: #F9EDE0;
     background-color: #725bd700;
     border-color: #F9EDE0;
@@ -101,7 +103,22 @@ img{
     color: #715BD720;
 }
 
-.go_register{
+.go_register,.go_login{
     font-size: 100%;
     color:#F9EDE0;
 }
+
+.intereses{
+    font-size: larger;
+    font-weight: bolder;
+    color: #715BD7;
+}
+
+.intereses_box{
+    margin: 10%;
+}
+.intereses_list{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
