@@ -1,0 +1,14 @@
+[
+  {
+    "usuario": "juan123",
+    "correo": "juan@example.com",
+    "contrasena": "pass123",
+    "intereses": ["Fotografía", "Programación"]
+  },
+  {
+    "usuario": "maria456",
+    "correo": "maria@example.com",
+    "contrasena": "pass456",
+    "intereses": ["Cocina"]
+  }
+]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Feed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <h1>Bienvenido, {{ usuario }}</h1>
+
+    <h2>Cursos recomendados:</h2>
+    <div id="cursos"></div>
+    <p id="mensaje"></p>
+
+    <form action="/logout" method="get">
+        <button type="submit">Cerrar sesión</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/feed.js') }}"></script>
+</body>
+</html>

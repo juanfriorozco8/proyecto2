@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const usuario = localStorage.getItem("usuario");
+  const usuario = sessionStorage.getItem("usuario");
   const cursosContainer = document.getElementById("cursos");
   const mensaje = document.getElementById("mensaje");
 
@@ -18,16 +18,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cursos = await res.json();
 
     if (res.ok && cursos.length > 0) {
-      cursos.forEach((curso) => {
+      cursos.forEach(curso => {
         const div = document.createElement("div");
         div.className = "card";
         div.innerHTML = `
-          <img src="${curso.foto || "https://via.placeholder.com/150"}" alt="${curso.titulo}" />
+          <img src="${curso.foto || 'https://via.placeholder.com/150'}" alt="${curso.titulo}" />
           <h3>${curso.titulo}</h3>
           <p><strong>Categoría:</strong> ${curso.categoria}</p>
           <p><strong>Dificultad:</strong> ${curso.dificultad}</p>
           <p><strong>Duración:</strong> ${curso.duracion}</p>
-          <button onclick="verCurso('${curso.id}')">Ver más</button>
+          <button onclick="verCurso(${curso.id})">Ver más</button>
         `;
         cursosContainer.appendChild(div);
       });
@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       mensaje.textContent = "No hay cursos recomendados en este momento.";
     }
   } catch (err) {
-    console.error(err);
     mensaje.textContent = "Error al cargar cursos.";
+    console.error(err);
   }
 });
 
 function verCurso(id) {
-  localStorage.setItem("curso_id", id);
-  window.location.href = "curso";
+  sessionStorage.setItem("curso_id", id);
+  window.location.href = "/curso?id=" + id;
 }

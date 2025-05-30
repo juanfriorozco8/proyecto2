@@ -1,22 +1,32 @@
 [
   {
-    "idCurso": "C1",
-    "titulo": "Fotografía Digital",
+    "titulo": "Fotografía Básica",
     "categoria": "Fotografía",
-    "dificultad": "Intermedio",
-    "duracion": "5h",
-    "contenido": "Aprende técnicas de fotografía con DSLR.",
-    "fotos": ["foto1.jpg", "foto2.jpg"],
-    "autor": "A1"
+    "dificultad": "Principiante",
+    "duracion": "4 horas",
+    "contenido": "Introducción a cámaras, composición y edición básica.",
+    "autor": "Ana Pérez",
+    "foto": "https://picsum.photos/200/300?random=1",
+    "etiquetas": ["Fotografía"]
   },
   {
-    "idCurso": "C2",
-    "titulo": "Diseño UX/UI",
-    "categoria": "Diseño Gráfico",
+    "titulo": "Python para Web",
+    "categoria": "Programación",
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Creación de aplicaciones web con Flask y Django.",
+    "autor": "Carlos López",
+    "foto": "https://picsum.photos/200/300?random=2",
+    "etiquetas": ["Programación"]
+  },
+  {
+    "titulo": "Cocina Internacional",
+    "categoria": "Cocina",
     "dificultad": "Avanzado",
-    "duracion": "8h",
-    "contenido": "Diseña interfaces atractivas y funcionales.",
-    "fotos": ["ux1.jpg", "ux2.jpg"],
-    "autor": "A2"
+    "duracion": "10 horas",
+    "contenido": "Recetas y técnicas de cocina de varios países.",
+    "autor": "María Gómez",
+    "foto": "https://picsum.photos/200/300?random=3",
+    "etiquetas": ["Cocina"]
   }
 ]

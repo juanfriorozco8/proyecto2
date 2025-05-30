@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <div class="container_reg"> 
+        <div class="reg_izq">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            </div>
+            <h1 class="creare_login">creare</h1>
+            <p class="slogan_login">aprendizaje sin límite</p>
+        </div> 
+        <div class="reg_der">
+            <h1>Regístrate</h1>
+            <form id="formRegistro">
+                <div class="inputs"> 
+                    <h2>Usuario</h2>
+                    <input class="ingreso" type="text" placeholder="Escribe acá" id="usuario" name="usuario" required><br>
+                    <h2>Contraseña</h2>
+                    <input class="ingreso" type="password" placeholder="Escribe acá" id="contrasena" name="contrasena" required><br>
+                    <h2>Correo electrónico</h2>
+                    <input class="ingreso" type="email" placeholder="Escribe acá" id="correo" name="correo" required><br>
+                </div>
+                <div class="intereses_box">
+                    <label class="intereses">Intereses:</label><br>
+                    <div class="intereses_list">
+                        <input type="checkbox" name="intereses" value="Fotografía"> Fotografía<br>
+                        <input type="checkbox" name="intereses" value="Música"> Música<br>
+                        <input type="checkbox" name="intereses" value="Diseño Gráfico"> Diseño Gráfico<br>
+                        <input type="checkbox" name="intereses" value="Programación"> Programación<br>
+                        <input type="checkbox" name="intereses" value="Cocina"> Cocina<br>
+                        <input type="checkbox" name="intereses" value="Animación"> Animación<br>
+                        <input type="checkbox" name="intereses" value="Salud"> Salud<br>
+                        <input type="checkbox" name="intereses" value="Nutrición"> Nutrición<br>
+                    </div>
+                </div>
+                <input class="next" type="submit" value="Siguiente   -->">
+                <p id="mensaje"></p>
+            </form>
+            <p class="go_login">¿Ya tienes cuenta? <a href="/login">Inicia sesión aquí</a></p>
+        </div> 
+    </div>
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+</body>
+</html>

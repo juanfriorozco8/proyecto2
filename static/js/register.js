@@ -10,14 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const contrasena = document.getElementById("contrasena").value;
 
     const checkboxes = document.querySelectorAll('input[name="intereses"]:checked');
-    const intereses = Array.from(checkboxes).map((cb) => cb.value);
+    const intereses = Array.from(checkboxes).map(cb => cb.value);
 
-    const datos = {
-      usuario,
-      correo,
-      contrasena,
-      intereses,
-    };
+    const datos = { usuario, correo, contrasena, intereses };
 
     try {
       const res = await fetch("/api/register", {
@@ -33,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mensaje.style.color = "green";
         form.reset();
         setTimeout(() => {
-          window.location.href = "login"; // Redirigir a login tras registro
+          window.location.href = "/login";
         }, 1500);
       } else {
         mensaje.textContent = json.error || "Error al registrar.";

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const cursoId = localStorage.getItem("curso_id");
-  const usuario = localStorage.getItem("usuario");
+  const cursoId = new URLSearchParams(window.location.search).get("id");
+  const usuario = sessionStorage.getItem("usuario");
   const mensaje = document.getElementById("mensaje");
 
   if (!cursoId || !usuario) {
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       mensaje.textContent = "Curso no encontrado.";
     }
   } catch (err) {
-    console.error(err);
     mensaje.textContent = "Error al cargar el curso.";
+    console.error(err);
   }
 
   document.getElementById("btnInscribir").addEventListener("click", async () => {
@@ -47,24 +47,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 });
-
-async function calificar(valor) {
-  const cursoId = localStorage.getItem("curso_id");
-  const usuario = localStorage.getItem("usuario");
-  const mensaje = document.getElementById("mensaje");
-
-  try {
-    const res = await fetch("/api/rating", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ usuario, curso_id: cursoId, rating: valor }),
-    });
-
-    const json = await res.json();
-    mensaje.textContent = res.ok ? "¡Gracias por tu calificación!" : json.error;
-    mensaje.style.color = res.ok ? "green" : "red";
-  } catch (err) {
-    mensaje.textContent = "Error al calificar.";
-    console.error(err);
-  }
-}

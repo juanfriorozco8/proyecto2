@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const json = await res.json();
 
       if (res.ok) {
-        localStorage.setItem("usuario", usuario);
-        window.location.href = "feed"; // Redirige al feed
+        sessionStorage.setItem("usuario", usuario);
+        window.location.href = "/feed";
       } else {
         mensaje.textContent = json.error || "Credenciales incorrectas.";
         mensaje.style.color = "red";
       }
     } catch (error) {
-      console.error(error);
       mensaje.textContent = "Error de conexión con el servidor.";
       mensaje.style.color = "red";
+      console.error(error);
     }
   });
 });
