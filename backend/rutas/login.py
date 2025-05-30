@@ -6,23 +6,33 @@ driver = get_driver()
 
 @login_bp.route("/login", methods=["GET"])
 def show_login():
+    if "usuario" in flask_session:
+        return redirect("/feed")
     return render_template("login.html")
 
 @login_bp.route("/api/login", methods=["POST"])
 def login():
     data = request.json
-    usuario = data.get("usuario")
-    contrasena = data.get("contrasena")
+    usuario = data.get("usuario", "").strip().lower()
+    contrasena = data.get("contrasena", "").strip()
 
-    with driver.session() as neo4j_session:
-        result = neo4j_session.run(
+    if not usuario or not contrasena:
+        return {"error": "Usuario y contraseña son requeridos"}, 400
+
+    with driver.session(database="neo4j") as session:
+        result = session.run(
             "MATCH (u:Usuario {usuario: $usuario, contrasena: $contrasena}) RETURN u",
-            usuario=usuario, contrasena=contrasena
+            usuario=usuario,
+            contrasena=contrasena
         )
         user = result.single()
+        if not user:
+            return {"error": "Credenciales incorrectas"}, 401
 
-    if user:
-        flask_session["usuario"] = usuario
-        return {"mensaje": "Inicio de sesión exitoso"}
-    else:
-        return {"error": "Credenciales incorrectas"}, 401
+    flask_session["usuario"] = usuario
+    return {"mensaje": "Inicio de sesión exitoso"}
+
+@login_bp.route("/logout")
+def logout():
+    flask_session.clear()
+    return redirect(url_for("login.show_login"))
