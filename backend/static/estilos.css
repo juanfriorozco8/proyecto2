@@ -1,0 +1,107 @@
+body {
+  background-color:#F9EDE0; 
+  color: #1A012F;  
+  margin: 0;
+  padding: 0; 
+  font-family: 'Lato', sans-serif;
+  font-weight: medium;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    font-size: 300%;
+    font-weight: 900;
+}
+
+
+h2{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    color: #715BD7;
+    font-size: 150%;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.container_login{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(199, 255, 255);
+}
+
+.login_izq{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9EDE0; 
+    color: #FF4848;
+    box-sizing: border-box;
+    padding: 15%;
+}
+
+.logo {
+    width:100%;
+}
+img{
+    width: 100%;
+}
+.creare_login {
+    font-size: 600%;
+    font-weight: 900;
+}
+.slogan_login{
+    font-style: italic;
+    font-size: 150%;
+}
+
+.login_der{
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    background-color: #1A012F; 
+    color: #F9EDE0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-height: 100%; 
+    padding: 5%;  
+}
+.login_boton{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    padding: 0;
+}
+
+.next{
+    font-size: 135%;
+    border-color: #FF4848;
+    font-weight: bolder;
+    margin-top: 30%;
+    margin: 15%;
+    padding: 5%;
+    color: #F9EDE0;
+    background-color: #725bd700;
+    border-color: #F9EDE0;
+    border-style: solid;
+    border-radius:20rcap;
+    border-width: 1px;
+}
+
+.ingreso{
+    border: 0;
+    background-color: #725bd760;
+    padding: 4.5%;
+    width: 100%;
+    color: #715BD720;
+}
+
+.go_register{
+    font-size: 100%;
+    color:#F9EDE0;
+}
