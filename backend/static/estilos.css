@@ -86,7 +86,6 @@ img{
 
     padding: 7%;
     padding-right: 13%;
-    padding-bottom: 0;
     color: #F9EDE0;
     background-color: #725bd700;
     border-color: #F9EDE0;
@@ -100,7 +99,7 @@ img{
     background-color: #725bd760;
     padding: 4.5%;
     width: 100%;
-    color: #715BD720;
+    color: #F9EDE0;
 }
 
 .go_register,.go_login{
