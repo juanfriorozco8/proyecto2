@@ -1,26 +1,28 @@
-from flask import Blueprint, request, jsonify
-from backend.utils.neo4j_driver import get_driver
+from flask import Blueprint, request, render_template, redirect, url_for, session as flask_session
+from ..utils.neo4j_driver import get_driver
 
-
-login_bp = Blueprint('login', __name__)
+login_bp = Blueprint("login", __name__)
 driver = get_driver()
 
-# Endpoint: Validar usuario y contraseña para login
-@login_bp.route('/login', methods=['POST'])
-def login():
-    data = request.get_json()
-    username = data.get("usuario")
-    password = data.get("contrasena")
+@login_bp.route("/login", methods=["GET"])
+def show_login():
+    return render_template("login.html")
 
-    with driver.session() as session:
-        query = """
-        MATCH (u:Usuario {usuario: $username, contrasena: $password})
-        RETURN u.usuario AS usuario
-        """
-        result = session.run(query, username=username, password=password)
+@login_bp.route("/api/login", methods=["POST"])
+def login():
+    data = request.json
+    usuario = data.get("usuario")
+    contrasena = data.get("contrasena")
+
+    with driver.session() as neo4j_session:
+        result = neo4j_session.run(
+            "MATCH (u:Usuario {usuario: $usuario, contrasena: $contrasena}) RETURN u",
+            usuario=usuario, contrasena=contrasena
+        )
         user = result.single()
 
-        if user:
-            return jsonify({"mensaje": "Login exitoso", "usuario": user["usuario"]}), 200
-        else:
-            return jsonify({"error": "Usuario o contraseña incorrectos"}), 401
+    if user:
+        flask_session["usuario"] = usuario
+        return {"mensaje": "Inicio de sesión exitoso"}
+    else:
+        return {"error": "Credenciales incorrectas"}, 401

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("loginForm");
+  const form = document.getElementById("formLogin");
   const mensaje = document.getElementById("mensaje");
 
   form.addEventListener("submit", async (e) => {
@@ -11,17 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const datos = { usuario, contrasena };
 
     try {
-      const res = await fetch("http://localhost:5050/api/login", {
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datos)
+        body: JSON.stringify(datos),
       });
 
       const json = await res.json();
 
       if (res.ok) {
         localStorage.setItem("usuario", usuario);
-        window.location.href = "index.html"; // Redirige al feed
+        window.location.href = "feed"; // Redirige al feed
       } else {
         mensaje.textContent = json.error || "Credenciales incorrectas.";
         mensaje.style.color = "red";

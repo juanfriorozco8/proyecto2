@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recomendaciones</title>
+</head>
+<body>
+    <h1>Bienvenido, {{ usuario }}</h1>
+    <div id="recomendaciones"></div>
+    <button onclick="window.location.href='/'">Cerrar sesión</button>
+
+    <script>
+        const usuario = "{{ usuario }}";
+        fetch(`/api/feed?usuario=${usuario}`)
+            .then(res => res.json())
+            .then(data => {
+                const cont = document.getElementById("recomendaciones");
+                if (data.cursos.length === 0) {
+                    cont.innerHTML = "<p>No hay cursos recomendados.</p>";
+                } else {
+                    data.cursos.forEach(curso => {
+                        const div = document.createElement("div");
+                        div.innerHTML = `
+                            <h3>${curso.titulo}</h3>
+                            <p>Autor: ${curso.autor}</p>
+                            <p>Dificultad: ${curso.dificultad}</p>
+                            <p>Duración: ${curso.duracion}</p>
+                            <a href="/curso?titulo=${curso.titulo}&usuario=${usuario}">Ver curso</a>
+                        `;
+                        cont.appendChild(div);
+                    });
+                }
+            });
+    </script>
+</body>
+</html>

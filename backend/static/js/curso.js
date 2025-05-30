@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const res = await fetch(`http://localhost:5050/api/curso/${cursoId}`);
+    const res = await fetch(`/api/curso/${cursoId}`);
     const curso = await res.json();
 
     if (res.ok) {
@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   document.getElementById("btnInscribir").addEventListener("click", async () => {
     try {
-      const res = await fetch("http://localhost:5050/api/inscribir", {
+      const res = await fetch("/api/inscribir", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ usuario, curso_id: cursoId })
+        body: JSON.stringify({ usuario, curso_id: cursoId }),
       });
 
       const json = await res.json();
@@ -54,10 +54,10 @@ async function calificar(valor) {
   const mensaje = document.getElementById("mensaje");
 
   try {
-    const res = await fetch("http://localhost:5050/api/rating", {
+    const res = await fetch("/api/rating", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ usuario, curso_id: cursoId, rating: valor })
+      body: JSON.stringify({ usuario, curso_id: cursoId, rating: valor }),
     });
 
     const json = await res.json();

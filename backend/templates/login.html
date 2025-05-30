@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar Sesión | Recomendador de Cursos</title>
-  <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <title>Iniciar sesión</title>
 </head>
 <body>
-  <div class="container">
     <h1>Iniciar Sesión</h1>
-
-    <form id="loginForm">
-      <label for="usuario">Usuario</label>
-      <input type="text" id="usuario" name="usuario" required>
-
-      <label for="contrasena">Contraseña</label>
-      <input type="password" id="contrasena" name="contrasena" required>
-
-      <button type="submit">Entrar</button>
+    <form id="formLogin">
+        <input type="text" placeholder="Usuario" id="usuario" required><br>
+        <input type="password" placeholder="Contraseña" id="contrasena" required><br>
+        <input type="submit" value="Entrar">
     </form>
+    <p>¿No tienes cuenta? <a href="/register">Regístrate aquí</a></p>
 
-    <p id="mensaje" class="mensaje"></p>
-  </div>
-
-  <script src="js/login.js"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 </body>
 </html>

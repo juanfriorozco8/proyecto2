@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Detalle del Curso</title>
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <title>Curso</title>
 </head>
 <body>
-  <div class="container">
-    <h1 id="tituloCurso">Curso</h1>
-    <img id="fotoCurso" src="" alt="Imagen del curso" style="max-width: 300px;"/>
-    <p><strong>Categoría:</strong> <span id="categoria"></span></p>
-    <p><strong>Dificultad:</strong> <span id="dificultad"></span></p>
-    <p><strong>Duración:</strong> <span id="duracion"></span></p>
-    <p><strong>Contenido:</strong> <span id="contenido"></span></p>
-
-    <h3>Autor</h3>
-    <p><strong>Nombre:</strong> <span id="autorNombre"></span></p>
-    <p><strong>Bio:</strong> <span id="autorBio"></span></p>
-    <img id="autorFoto" src="" alt="Foto del autor" style="max-width: 150px;"/>
-
-    <br><br>
-    <button id="btnInscribir">Inscribirme</button>
-    <button onclick="calificar('like')">👍 Me gusta</button>
-    <button onclick="calificar('dislike')">👎 No me gusta</button>
-
-    <p id="mensaje"></p>
-  </div>
-
-  <script src="js/curso.js"></script>
+    <h1>{{ curso.titulo }}</h1>
+    <p><strong>Autor:</strong> {{ curso.autor }}</p>
+    <p><strong>Duración:</strong> {{ curso.duracion }}</p>
+    <p><strong>Dificultad:</strong> {{ curso.dificultad }}</p>
+    <p><strong>Contenido:</strong> {{ curso.contenido }}</p>
+    <img src="{{ curso.foto }}" alt="Imagen del curso" width="200">
+    <br>
+    <form action="/api/inscribirse" method="post">
+        <input type="hidden" id="usuario" value="{{ usuario }}">
+        <input type="hidden" id="titulo" value="{{ curso.titulo }}">
+        <button type="submit">Inscribirme</button>
+    </form>
+    <br>
+    <a href="/feed?usuario={{ usuario }}">← Volver a recomendaciones</a>
 </body>
 </html>

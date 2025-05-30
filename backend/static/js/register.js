@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("registroForm");
+  const form = document.getElementById("formRegistro");
   const mensaje = document.getElementById("mensaje");
 
   form.addEventListener("submit", async (e) => {
@@ -9,25 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const correo = document.getElementById("correo").value;
     const contrasena = document.getElementById("contrasena").value;
 
-    // Obtener los intereses seleccionados
     const checkboxes = document.querySelectorAll('input[name="intereses"]:checked');
-    const intereses = Array.from(checkboxes).map(cb => cb.value);
+    const intereses = Array.from(checkboxes).map((cb) => cb.value);
 
-    // Armar el cuerpo del POST
     const datos = {
       usuario,
       correo,
       contrasena,
-      intereses
+      intereses,
     };
 
     try {
-      const res = await fetch("http://localhost:5050/api/register", {
+      const res = await fetch("/api/register", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(datos)
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(datos),
       });
 
       const json = await res.json();
@@ -36,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
         mensaje.textContent = "Registro exitoso 🎉";
         mensaje.style.color = "green";
         form.reset();
+        setTimeout(() => {
+          window.location.href = "login"; // Redirigir a login tras registro
+        }, 1500);
       } else {
         mensaje.textContent = json.error || "Error al registrar.";
         mensaje.style.color = "red";

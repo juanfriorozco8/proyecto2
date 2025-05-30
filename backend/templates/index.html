@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Feed de Cursos | Recomendador</title>
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <title>Inicio</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Cursos Recomendados</h1>
-    <div id="cursos" class="grid"></div>
-    <p id="mensaje"></p>
-  </div>
+    <h1>Bienvenido a la Plataforma de Cursos</h1>
+    <button id="btnLogin">Iniciar sesión</button>
+    <button id="btnRegister">Registrarse</button>
 
-  <script src="js/index.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 </html>

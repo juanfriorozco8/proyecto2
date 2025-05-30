@@ -1,50 +1,36 @@
-from flask import Blueprint, request, jsonify
-from backend.utils.neo4j_driver import get_driver
+from flask import Blueprint, request, render_template, redirect, url_for, session as flask_session
+from ..utils.neo4j_driver import get_driver
 
-register_bp = Blueprint('register', __name__)
+register_bp = Blueprint("register", __name__)
 driver = get_driver()
 
-# Endpoint: Registro de nuevo usuario
-@register_bp.route('/register', methods=['POST'])
-def registrar_usuario():
-    data = request.get_json()
-    username = data.get("usuario")
+@register_bp.route("/register", methods=["GET"])
+def show_register():
+    return render_template("register.html")
+
+@register_bp.route("/api/register", methods=["POST"])
+def register_user():
+    data = request.json
+    usuario = data.get("usuario")
     contrasena = data.get("contrasena")
     correo = data.get("correo")
     intereses = data.get("intereses", [])
 
-    if not username or not contrasena or not correo:
-        return jsonify({"error": "Faltan campos obligatorios"}), 400
-
-    with driver.session() as session:
-        # Verificar si el usuario ya existe
-        existe_query = """
-        MATCH (u:Usuario {usuario: $username})
-        RETURN u
-        """
-        if session.run(existe_query, username=username).single():
-            return jsonify({"error": "El nombre de usuario ya existe"}), 409
-
-        # Crear el usuario
-        crear_query = """
-        CREATE (u:Usuario {
-            usuario: $username,
-            contrasena: $contrasena,
-            correo: $correo
-        })
-        """
-        session.run(crear_query, username=username, contrasena=contrasena, correo=correo)
-
-        # Conectar usuario con categorías (insensible a capitalización)
-        for categoria in intereses:
-            relacion_query = """
-            MATCH (u:Usuario {usuario: $username})
-            MATCH (c:Categoria)
-            WHERE toLower(c.nombre) = toLower($categoria)
-            MERGE (u)-[:INTERESADO_EN]->(c)
+    with driver.session() as neo4j_session:
+        neo4j_session.run(
             """
-            session.run(relacion_query, username=username, categoria=categoria)
+            CREATE (u:Usuario {usuario: $usuario, contrasena: $contrasena, correo: $correo})
+            """, usuario=usuario, contrasena=contrasena, correo=correo
+        )
 
-    return jsonify({"mensaje": "Usuario registrado correctamente"}), 201
+        for interes in intereses:
+            neo4j_session.run(
+                """
+                MATCH (u:Usuario {usuario: $usuario}), (c:Categoria {nombre: $interes})
+                CREATE (u)-[:INTERESADO_EN]->(c)
+                """, usuario=usuario, interes=interes
+            )
+
+    return {"mensaje": "Usuario registrado correctamente"}
 
 
