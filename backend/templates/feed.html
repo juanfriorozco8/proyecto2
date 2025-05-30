@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Recomendaciones</title>
+    <meta charset="UTF-8" />
+    <title>Feed</title>
 </head>
 <body>
     <h1>Bienvenido, {{ usuario }}</h1>
-    <div id="recomendaciones"></div>
-    <button onclick="window.location.href='/'">Cerrar sesión</button>
+
+    <h2>Cursos recomendados:</h2>
+    <div id="cursos"></div>
+
+    <!-- Botón Cerrar sesión que SÍ funciona -->
+    <form action="/logout" method="get">
+        <button type="submit">Cerrar sesión</button>
+    </form>
 
     <script>
-        const usuario = "{{ usuario }}";
-        fetch(`/api/feed?usuario=${usuario}`)
-            .then(res => res.json())
+        // Llamar a /api/feed para obtener cursos
+        fetch('/api/feed')
+            .then(response => response.json())
             .then(data => {
-                const cont = document.getElementById("recomendaciones");
-                if (data.cursos.length === 0) {
-                    cont.innerHTML = "<p>No hay cursos recomendados.</p>";
-                } else {
+                const cursosDiv = document.getElementById('cursos');
+                if (data.cursos && data.cursos.length > 0) {
                     data.cursos.forEach(curso => {
-                        const div = document.createElement("div");
-                        div.innerHTML = `
+                        const cursoElement = document.createElement('div');
+                        cursoElement.innerHTML = `
                             <h3>${curso.titulo}</h3>
-                            <p>Autor: ${curso.autor}</p>
-                            <p>Dificultad: ${curso.dificultad}</p>
                             <p>Duración: ${curso.duracion}</p>
-                            <a href="/curso?titulo=${curso.titulo}&usuario=${usuario}">Ver curso</a>
+                            <hr>
                         `;
-                        cont.appendChild(div);
+                        cursosDiv.appendChild(cursoElement);
                     });
+                } else {
+                    cursosDiv.innerHTML = '<p>No hay cursos recomendados.</p>';
                 }
+            })
+            .catch(error => {
+                console.error('Error al cargar cursos:', error);
             });
     </script>
 </body>
