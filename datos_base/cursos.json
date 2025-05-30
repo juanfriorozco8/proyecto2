@@ -10,15 +10,159 @@
     "etiquetas": ["Fotografía"]
   },
   {
+    "titulo": "Retrato Profesional",
+    "categoria": "Fotografía",
+    "dificultad": "Intermedio",
+    "duracion": "6 horas",
+    "contenido": "Técnicas avanzadas para retratos y uso de luz.",
+    "autor": "Luis Méndez",
+    "foto": "https://picsum.photos/200/300?random=2",
+    "etiquetas": ["Fotografía"]
+  },
+  {
+    "titulo": "Fotografía de Naturaleza",
+    "categoria": "Fotografía",
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Captura de paisajes y fauna con técnicas avanzadas.",
+    "autor": "Isabel García",
+    "foto": "https://picsum.photos/200/300?random=3",
+    "etiquetas": ["Fotografía"]
+  },
+  {
+    "titulo": "Fotografía Nocturna",
+    "categoria": "Fotografía",
+    "dificultad": "Avanzado",
+    "duracion": "8 horas",
+    "contenido": "Técnicas para fotografía en condiciones de poca luz.",
+    "autor": "Pedro Sánchez",
+    "foto": "https://picsum.photos/200/300?random=4",
+    "etiquetas": ["Fotografía"]
+  },
+
+  {
+    "titulo": "Producción Musical desde Cero",
+    "categoria": "Música",
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Cómo producir música usando software profesional.",
+    "autor": "Carlos López",
+    "foto": "https://picsum.photos/200/300?random=5",
+    "etiquetas": ["Música"]
+  },
+  {
+    "titulo": "Composición y Arreglo",
+    "categoria": "Música",
+    "dificultad": "Avanzado",
+    "duracion": "8 horas",
+    "contenido": "Aprende a crear composiciones complejas y arreglos musicales.",
+    "autor": "María Torres",
+    "foto": "https://picsum.photos/200/300?random=6",
+    "etiquetas": ["Música"]
+  },
+  {
+    "titulo": "Ingeniería de Sonido",
+    "categoria": "Música",
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Grabación y edición de audio profesional.",
+    "autor": "Javier Ruiz",
+    "foto": "https://picsum.photos/200/300?random=7",
+    "etiquetas": ["Música"]
+  },
+  {
+    "titulo": "Piano para Principiantes",
+    "categoria": "Música",
+    "dificultad": "Principiante",
+    "duracion": "4 horas",
+    "contenido": "Técnicas básicas para aprender piano desde cero.",
+    "autor": "Lucía Fernández",
+    "foto": "https://picsum.photos/200/300?random=8",
+    "etiquetas": ["Música"]
+  },
+
+  {
+    "titulo": "Diseño Digital para Principiantes",
+    "categoria": "Diseño Gráfico",
+    "dificultad": "Principiante",
+    "duracion": "4 horas",
+    "contenido": "Fundamentos del diseño y herramientas digitales básicas.",
+    "autor": "Jorge Ruiz",
+    "foto": "https://picsum.photos/200/300?random=9",
+    "etiquetas": ["Diseño Gráfico"]
+  },
+  {
+    "titulo": "Branding y Marca Personal",
+    "categoria": "Diseño Gráfico",
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Construcción y estrategia para marcas personales.",
+    "autor": "Sofía Martínez",
+    "foto": "https://picsum.photos/200/300?random=10",
+    "etiquetas": ["Diseño Gráfico"]
+  },
+  {
+    "titulo": "Ilustración Digital",
+    "categoria": "Diseño Gráfico",
+    "dificultad": "Intermedio",
+    "duracion": "6 horas",
+    "contenido": "Técnicas para crear ilustraciones digitales profesionales.",
+    "autor": "Marcos Díaz",
+    "foto": "https://picsum.photos/200/300?random=11",
+    "etiquetas": ["Diseño Gráfico"]
+  },
+  {
+    "titulo": "Diseño Editorial",
+    "categoria": "Diseño Gráfico",
+    "dificultad": "Avanzado",
+    "duracion": "8 horas",
+    "contenido": "Diseño y composición para medios impresos y digitales.",
+    "autor": "Clara Gómez",
+    "foto": "https://picsum.photos/200/300?random=12",
+    "etiquetas": ["Diseño Gráfico"]
+  },
+
+  {
     "titulo": "Python para Web",
     "categoria": "Programación",
     "dificultad": "Intermedio",
     "duracion": "8 horas",
     "contenido": "Creación de aplicaciones web con Flask y Django.",
-    "autor": "Carlos López",
-    "foto": "https://picsum.photos/200/300?random=2",
+    "autor": "Carlos Vega",
+    "foto": "https://picsum.photos/200/300?random=13",
     "etiquetas": ["Programación"]
   },
+  {
+    "titulo": "JavaScript desde Cero",
+    "categoria": "Programación",
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Aprende JavaScript y desarrollo frontend moderno.",
+    "autor": "Elena Gómez",
+    "foto": "https://picsum.photos/200/300?random=14",
+    "etiquetas": ["Programación"]
+  },
+  {
+    "titulo": "Desarrollo Móvil",
+    "categoria": "Programación",
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Creación de aplicaciones para Android e iOS.",
+    "autor": "Daniel Hernández",
+    "foto": "https://picsum.photos/200/300?random=15",
+    "etiquetas": ["Programación"]
+  },
+  {
+    "titulo": "DevOps Básico",
+    "categoria": "Programación",
+    "dificultad": "Intermedio",
+    "duracion": "5 horas",
+    "contenido": "Fundamentos de integración y entrega continua.",
+    "autor": "Paula Morales",
+    "foto": "https://picsum.photos/200/300?random=16",
+    "etiquetas": ["Programación"]
+  },
+
   {
     "titulo": "Cocina Internacional",
     "categoria": "Cocina",
@@ -26,78 +170,160 @@
     "duracion": "10 horas",
     "contenido": "Recetas y técnicas de cocina de varios países.",
     "autor": "María Gómez",
-    "foto": "https://picsum.photos/200/300?random=3",
+    "foto": "https://picsum.photos/200/300?random=17",
+    "etiquetas": ["Cocina"]
+  },
+  {
+    "titulo": "Cocina Vegana Fácil",
+    "categoria": "Cocina",
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Platos veganos sencillos y nutritivos.",
+    "autor": "Andrés Herrera",
+    "foto": "https://picsum.photos/200/300?random=18",
+    "etiquetas": ["Cocina"]
+  },
+  {
+    "titulo": "Pastelería Creativa",
+    "categoria": "Cocina",
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Técnicas y recetas para postres y pasteles.",
+    "autor": "Lucía Ramírez",
+    "foto": "https://picsum.photos/200/300?random=19",
+    "etiquetas": ["Cocina"]
+  },
+  {
+    "titulo": "Gastronomía Molecular",
+    "categoria": "Cocina",
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Explora la ciencia detrás de la cocina moderna.",
+    "autor": "José Fernández",
+    "foto": "https://picsum.photos/200/300?random=20",
     "etiquetas": ["Cocina"]
   },
 
   {
-    "titulo": "Introducción a la Ilustración Digital",
-    "categoria": "Diseño",
+    "titulo": "Animación 3D Básica",
+    "categoria": "Animación",
     "dificultad": "Principiante",
     "duracion": "6 horas",
-    "contenido": "Conceptos básicos de ilustración digital y uso de tabletas gráficas.",
-    "autor": "Luis Martínez",
-    "foto": "https://picsum.photos/200/300?random=4",
-    "etiquetas": ["Diseño"]
+    "contenido": "Introducción a la animación 3D con software popular.",
+    "autor": "Valeria Santos",
+    "foto": "https://picsum.photos/200/300?random=21",
+    "etiquetas": ["Animación"]
   },
   {
-    "titulo": "Marketing Digital para Emprendedores",
-    "categoria": "Marketing",
+    "titulo": "Animación para Videojuegos",
+    "categoria": "Animación",
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Técnicas avanzadas para animar personajes y entornos.",
+    "autor": "Javier Morales",
+    "foto": "https://picsum.photos/200/300?random=22",
+    "etiquetas": ["Animación"]
+  },
+  {
+    "titulo": "Storyboard y Concept Art",
+    "categoria": "Animación",
     "dificultad": "Intermedio",
     "duracion": "7 horas",
-    "contenido": "Estrategias para aumentar la presencia online y ventas digitales.",
-    "autor": "Sofía Ramírez",
-    "foto": "https://picsum.photos/200/300?random=5",
-    "etiquetas": ["Marketing"]
+    "contenido": "Creación de guiones gráficos para animación y cine.",
+    "autor": "Natalia Vargas",
+    "foto": "https://picsum.photos/200/300?random=23",
+    "etiquetas": ["Animación"]
   },
   {
-    "titulo": "Bases de Datos con SQL",
-    "categoria": "Programación",
-    "dificultad": "Principiante",
-    "duracion": "5 horas",
-    "contenido": "Modelado, consultas básicas y avanzadas en SQL.",
-    "autor": "David Herrera",
-    "foto": "https://picsum.photos/200/300?random=6",
-    "etiquetas": ["Programación"]
-  },
-  {
-    "titulo": "Producción Musical con Ableton Live",
-    "categoria": "Música",
+    "titulo": "Animación Tradicional",
+    "categoria": "Animación",
     "dificultad": "Avanzado",
-    "duracion": "12 horas",
-    "contenido": "Técnicas de producción, mezcla y mastering con Ableton.",
-    "autor": "Clara Gómez",
-    "foto": "https://picsum.photos/200/300?random=7",
-    "etiquetas": ["Música"]
+    "duracion": "8 horas",
+    "contenido": "Técnicas clásicas de animación 2D.",
+    "autor": "Roberto Díaz",
+    "foto": "https://picsum.photos/200/300?random=24",
+    "etiquetas": ["Animación"]
+  },
+
+  {
+    "titulo": "Salud Integral y Bienestar",
+    "categoria": "Salud",
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Consejos y prácticas para una vida saludable.",
+    "autor": "Diana Pérez",
+    "foto": "https://picsum.photos/200/300?random=25",
+    "etiquetas": ["Salud"]
   },
   {
-    "titulo": "Yoga para Principiantes",
-    "categoria": "Salud y Bienestar",
+    "titulo": "Mindfulness para Principiantes",
+    "categoria": "Salud",
     "dificultad": "Principiante",
-    "duracion": "3 horas",
-    "contenido": "Posturas básicas, respiración y meditación para empezar en yoga.",
-    "autor": "Juan Pérez",
-    "foto": "https://picsum.photos/200/300?random=8",
-    "etiquetas": ["Salud y Bienestar"]
+    "duracion": "4 horas",
+    "contenido": "Aprende técnicas básicas de mindfulness y meditación.",
+    "autor": "Miguel Rodríguez",
+    "foto": "https://picsum.photos/200/300?random=26",
+    "etiquetas": ["Salud"]
   },
   {
-    "titulo": "Taller de Escritura Creativa",
-    "categoria": "Literatura",
+    "titulo": "Terapias Naturales",
+    "categoria": "Salud",
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Explora técnicas y terapias alternativas para la salud.",
+    "autor": "Laura Sánchez",
+    "foto": "https://picsum.photos/200/300?random=27",
+    "etiquetas": ["Salud"]
+  },
+  {
+    "titulo": "Medicina Alternativa",
+    "categoria": "Salud",
+    "dificultad": "Intermedio",
+    "duracion": "6 horas",
+    "contenido": "Introducción a prácticas de medicina alternativa.",
+    "autor": "Fernando Castro",
+    "foto": "https://picsum.photos/200/300?random=28",
+    "etiquetas": ["Salud"]
+  },
+
+  {
+    "titulo": "Nutrición Deportiva",
+    "categoria": "Nutrición",
     "dificultad": "Intermedio",
     "duracion": "8 horas",
-    "contenido": "Desarrollo de técnicas para mejorar la narrativa y estilo personal.",
-    "autor": "Elena Castillo",
-    "foto": "https://picsum.photos/200/300?random=9",
-    "etiquetas": ["Literatura"]
+    "contenido": "Alimentación para optimizar el rendimiento físico.",
+    "autor": "Natalia Ruiz",
+    "foto": "https://picsum.photos/200/300?random=29",
+    "etiquetas": ["Nutrición"]
   },
   {
-    "titulo": "Electrónica Básica para Makers",
-    "categoria": "Tecnología",
+    "titulo": "Dietoterapia Clínica",
+    "categoria": "Nutrición",
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Tratamiento nutricional para enfermedades crónicas.",
+    "autor": "Fernando López",
+    "foto": "https://picsum.photos/200/300?random=30",
+    "etiquetas": ["Nutrición"]
+  },
+  {
+    "titulo": "Nutrición Infantil",
+    "categoria": "Nutrición",
     "dificultad": "Principiante",
-    "duracion": "6 horas",
-    "contenido": "Fundamentos de circuitos, sensores y microcontroladores.",
-    "autor": "Roberto Sánchez",
-    "foto": "https://picsum.photos/200/300?random=10",
-    "etiquetas": ["Tecnología"]
+    "duracion": "5 horas",
+    "contenido": "Alimentación saludable para niños.",
+    "autor": "Andrea Morales",
+    "foto": "https://picsum.photos/200/300?random=31",
+    "etiquetas": ["Nutrición"]
+  },
+  {
+    "titulo": "Salud Pública y Nutrición",
+    "categoria": "Nutrición",
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Políticas y estrategias para la nutrición pública.",
+    "autor": "Ricardo Herrera",
+    "foto": "https://picsum.photos/200/300?random=32",
+    "etiquetas": ["Nutrición"]
   }
 ]

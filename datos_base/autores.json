@@ -1,52 +1,41 @@
 [
-  {
-    "nombre": "Ana Pérez",
-    "biografia": "Experta en fotografía con 10 años de experiencia.",
-    "foto": "https://i.pravatar.cc/150?img=1"
-  },
-  {
-    "nombre": "Carlos López",
-    "biografia": "Desarrollador senior en Python y tecnologías web.",
-    "foto": "https://i.pravatar.cc/150?img=2"
-  },
-  {
-    "nombre": "María Gómez",
-    "biografia": "Chef profesional especializada en cocina internacional.",
-    "foto": "https://i.pravatar.cc/150?img=3"
-  },
-  {
-    "nombre": "Luis Martínez",
-    "biografia": "Diseñador gráfico y artista digital con más de 8 años de experiencia.",
-    "foto": "https://i.pravatar.cc/150?img=4"
-  },
-  {
-    "nombre": "Sofía Ramírez",
-    "biografia": "Especialista en marketing digital para pequeñas y medianas empresas.",
-    "foto": "https://i.pravatar.cc/150?img=5"
-  },
-  {
-    "nombre": "David Herrera",
-    "biografia": "Ingeniero en sistemas con enfoque en bases de datos y optimización.",
-    "foto": "https://i.pravatar.cc/150?img=6"
-  },
-  {
-    "nombre": "Clara Gómez",
-    "biografia": "Productora musical y DJ con experiencia internacional.",
-    "foto": "https://i.pravatar.cc/150?img=7"
-  },
-  {
-    "nombre": "Juan Pérez",
-    "biografia": "Instructor certificado de yoga y bienestar holístico.",
-    "foto": "https://i.pravatar.cc/150?img=8"
-  },
-  {
-    "nombre": "Elena Castillo",
-    "biografia": "Escritora y tallerista literaria con varias publicaciones.",
-    "foto": "https://i.pravatar.cc/150?img=9"
-  },
-  {
-    "nombre": "Roberto Sánchez",
-    "biografia": "Ingeniero electrónico y apasionado maker con proyectos en Arduino.",
-    "foto": "https://i.pravatar.cc/150?img=10"
-  }
+  {"nombre": "Ana Pérez", "biografia": "Experta en fotografía con 10 años de experiencia.", "foto": "https://i.pravatar.cc/150?img=1"},
+  {"nombre": "Luis Méndez", "biografia": "Fotógrafo profesional especializado en retrato.", "foto": "https://i.pravatar.cc/150?img=11"},
+  {"nombre": "Isabel García", "biografia": "Fotógrafa de naturaleza y paisajes.", "foto": "https://i.pravatar.cc/150?img=21"},
+  {"nombre": "Pedro Sánchez", "biografia": "Especialista en fotografía nocturna.", "foto": "https://i.pravatar.cc/150?img=31"},
+
+  {"nombre": "Carlos López", "biografia": "Músico y productor con más de 15 años en la industria.", "foto": "https://i.pravatar.cc/150?img=2"},
+  {"nombre": "María Torres", "biografia": "Compositora y cantante reconocida internacionalmente.", "foto": "https://i.pravatar.cc/150?img=12"},
+  {"nombre": "Javier Ruiz", "biografia": "Ingeniero de sonido y DJ profesional.", "foto": "https://i.pravatar.cc/150?img=22"},
+  {"nombre": "Lucía Fernández", "biografia": "Pianista y docente musical.", "foto": "https://i.pravatar.cc/150?img=32"},
+
+  {"nombre": "Jorge Ruiz", "biografia": "Diseñador gráfico y creativo freelance.", "foto": "https://i.pravatar.cc/150?img=3"},
+  {"nombre": "Sofía Martínez", "biografia": "Especialista en branding y diseño digital.", "foto": "https://i.pravatar.cc/150?img=13"},
+  {"nombre": "Marcos Díaz", "biografia": "Ilustrador y diseñador UX/UI.", "foto": "https://i.pravatar.cc/150?img=23"},
+  {"nombre": "Clara Gómez", "biografia": "Experta en tipografía y diseño editorial.", "foto": "https://i.pravatar.cc/150?img=33"},
+
+  {"nombre": "Carlos Vega", "biografia": "Ingeniero de software experto en Python y JavaScript.", "foto": "https://i.pravatar.cc/150?img=4"},
+  {"nombre": "Elena Gómez", "biografia": "Desarrolladora full stack y educadora.", "foto": "https://i.pravatar.cc/150?img=14"},
+  {"nombre": "Daniel Hernández", "biografia": "Especialista en desarrollo móvil.", "foto": "https://i.pravatar.cc/150?img=24"},
+  {"nombre": "Paula Morales", "biografia": "Arquitecta de software y DevOps.", "foto": "https://i.pravatar.cc/150?img=34"},
+
+  {"nombre": "María Gómez", "biografia": "Chef profesional especializada en cocina internacional.", "foto": "https://i.pravatar.cc/150?img=5"},
+  {"nombre": "Andrés Herrera", "biografia": "Chef especializado en cocina vegana y saludable.", "foto": "https://i.pravatar.cc/150?img=15"},
+  {"nombre": "Lucía Ramírez", "biografia": "Pastelera y experta en repostería creativa.", "foto": "https://i.pravatar.cc/150?img=25"},
+  {"nombre": "José Fernández", "biografia": "Chef de alta cocina y gastronomía molecular.", "foto": "https://i.pravatar.cc/150?img=35"},
+
+  {"nombre": "Valeria Santos", "biografia": "Animadora 3D y artista digital.", "foto": "https://i.pravatar.cc/150?img=6"},
+  {"nombre": "Javier Morales", "biografia": "Experto en animación para videojuegos y cine.", "foto": "https://i.pravatar.cc/150?img=16"},
+  {"nombre": "Natalia Vargas", "biografia": "Diseñadora de personajes y storyboard.", "foto": "https://i.pravatar.cc/150?img=26"},
+  {"nombre": "Roberto Díaz", "biografia": "Animador tradicional y digital.", "foto": "https://i.pravatar.cc/150?img=36"},
+
+  {"nombre": "Diana Pérez", "biografia": "Especialista en salud integral y bienestar.", "foto": "https://i.pravatar.cc/150?img=7"},
+  {"nombre": "Miguel Rodríguez", "biografia": "Coach en salud mental y desarrollo personal.", "foto": "https://i.pravatar.cc/150?img=17"},
+  {"nombre": "Laura Sánchez", "biografia": "Terapeuta holística y naturópata.", "foto": "https://i.pravatar.cc/150?img=27"},
+  {"nombre": "Fernando Castro", "biografia": "Especialista en medicina alternativa.", "foto": "https://i.pravatar.cc/150?img=37"},
+
+  {"nombre": "Natalia Ruiz", "biografia": "Nutricionista especializada en alimentación deportiva.", "foto": "https://i.pravatar.cc/150?img=8"},
+  {"nombre": "Fernando López", "biografia": "Experto en nutrición clínica y dietoterapia.", "foto": "https://i.pravatar.cc/150?img=18"},
+  {"nombre": "Andrea Morales", "biografia": "Consultora en nutrición y bienestar.", "foto": "https://i.pravatar.cc/150?img=28"},
+  {"nombre": "Ricardo Herrera", "biografia": "Investigador en nutrición y salud pública.", "foto": "https://i.pravatar.cc/150?img=38"}
 ]
