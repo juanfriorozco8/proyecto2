@@ -38,7 +38,7 @@ def api_register():
     usuario = data.get('usuario')
     correo = data.get('correo')
     contrasena = data.get('contrasena')
-    intereses = data.get('intereses', [])
+    
 
     q = "MATCH (u:Usuario {usuario:$usuario}) RETURN u"
     if run_query(q, {'usuario': usuario}, single=True):
@@ -52,7 +52,21 @@ def api_register():
     })
     """
     run_query(query, {'usuario': usuario, 'correo': correo, 'contrasena': contrasena})
+    session['usuario'] = usuario
 
+    return jsonify({"msg": "Usuario registrado exitosamente"})
+
+@app.route('/intereses', methods=['GET'])
+def intereses_page():
+    return render_template('intereses.html')
+
+@app.route('/api/intereses', methods=['POST'])
+def cargar_intereses():
+    usuario = session.get('usuario')
+    if not usuario:
+        return jsonify({"error": "Sesión expirada o no iniciada"}), 403
+    data = request.json
+    intereses = data.get('intereses', [])
     print("Intereses recibidos en backend:", intereses)
     for inter in intereses:
         # Crear etiqueta si no existe y relacionar
@@ -63,8 +77,7 @@ def api_register():
         MERGE (u)-[:INTERESA_EN]->(e)
         """
         run_query(q_inter, {'usuario': usuario, 'interes': inter})
-
-    return jsonify({"msg": "Usuario registrado exitosamente"})
+        return jsonify({"msg": "Intereses guardados exitosamente"})
 
 @app.route('/login', methods=['GET'])
 def login_page():
@@ -201,14 +214,32 @@ def api_rating():
     if not run_query(q_curso, {'curso_id': int(curso_id)}, single=True):
         return jsonify({"error": "Curso no encontrado"}), 404
 
-    q_rating = """
-    MATCH (c:Curso)
-    WHERE id(c) = $curso_id
-    SET c.rating = $rating
+    # 1. Guardar el rating como relación entre usuario y curso
+    guardar_rating = """
+    MERGE (u:Usuario {usuario:$usuario})
+    WITH u
+    MATCH (c:Curso) WHERE id(c) = $curso_id
+    MERGE (u)-[r:CALIFICO]->(c)
+    SET r.valor = $rating
     """
-    run_query(q_rating, {'curso_id': int(curso_id), 'rating': float(rating)})
+    run_query(guardar_rating, {
+        'usuario': usuario,
+        'curso_id': int(curso_id),
+        'rating': float(rating)
+    })
 
-    return jsonify({"msg": "Calificación guardada"})
+    # 2. Calcular y actualizar el promedio de calificaciones
+    actualizar_promedio = """
+    MATCH (c:Curso) WHERE id(c) = $curso_id
+    WITH c
+    MATCH (u)-[r:CALIFICO]->(c)
+    WITH c, avg(r.valor) AS promedio
+    SET c.rating = promedio
+    """
+    run_query(actualizar_promedio, {'curso_id': int(curso_id)})
+
+    # 3. Respuesta al frontend
+    return jsonify({"msg": "Calificación guardada y promedio actualizado"})
 
 @app.route('/cargar_base')
 def cargar_base():

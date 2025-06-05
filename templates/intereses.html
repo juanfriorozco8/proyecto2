@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intereses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+    <div class="container_interest">
+        <div class="header">
+            <div class="logo_header">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            </div>
+            <h1 class="creare_header">creare</h1>
+        </div>
+        <form id="registrar_intereses">
+            <div class="intereses_list">
+                <div id="intereses"></div>
+                <!--<label class="intereses">Intereses:</label><br>
+                <div class="intereses_list">
+                    <input type="checkbox" name="intereses" value="Fotografía"> Fotografía<br>
+                    <input type="checkbox" name="intereses" value="Música"> Música<br>
+                    <input type="checkbox" name="intereses" value="Diseño Gráfico"> Diseño Gráfico<br>
+                    <input type="checkbox" name="intereses" value="Programación"> Programación<br>
+                    <input type="checkbox" name="intereses" value="Cocina"> Cocina<br>
+                    <input type="checkbox" name="intereses" value="Animación"> Animación<br>
+                    <input type="checkbox" name="intereses" value="Salud"> Salud<br>
+                    <input type="checkbox" name="intereses" value="Nutrición"> Nutrición<br>
+                </div> -->
+            </div>
+            <input class="next" type="submit" value="Siguiente -->">
+            <p id="mensaje"></p>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/intereses.js') }}"></script>
+</body>
+
+</html>

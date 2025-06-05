@@ -1,10 +1,10 @@
 body {
-  background-color:#F9EDE0; 
-  color: #1A012F;  
-  margin: 0;
-  padding: 0; 
-  font-family: 'Lato', sans-serif;
-  font-weight: medium;
+    background-color: #F9EDE0;
+    color: #1A012F;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: medium;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
     font-weight: 900;
 }
 
-h2{
+h2 {
     font-family: 'Lato', sans-serif;
     margin: 0;
     color: #715BD7;
@@ -23,7 +23,8 @@ h2{
     font-weight: lighter;
 }
 
-.container_login, .container_reg{
+.container_login,
+.container_reg {
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -31,46 +32,52 @@ h2{
     background-color: rgb(199, 255, 255);
 }
 
-.login_izq,.reg_izq{
+.login_izq,
+.reg_izq {
     width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F9EDE0; 
+    background-color: #F9EDE0;
     color: #FF4848;
     box-sizing: border-box;
     padding: 15%;
 }
 
 .logo {
-    width:100%;
-}
-img{
     width: 100%;
 }
+
+img {
+    width: 100%;
+}
+
 .creare_login {
     font-size: 600%;
     font-weight: 900;
 }
-.slogan_login{
+
+.slogan_login {
     font-style: italic;
     font-size: 150%;
 }
 
-.login_der, .reg_der{
+.login_der,
+.reg_der {
     justify-content: center;
     align-items: center;
     width: 45%;
-    background-color: #1A012F; 
+    background-color: #1A012F;
     color: #F9EDE0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    max-height: 100%; 
-    padding: 5%;  
+    max-height: 100%;
+    padding: 5%;
 }
-.next{
+
+.next {
     font-size: 100%;
     border-color: #FF4848;
     font-weight: bolder;
@@ -84,11 +91,11 @@ img{
     background-color: #725bd700;
     border-color: #F9EDE0;
     border-style: solid;
-    border-radius:20px;
+    border-radius: 20px;
     border-width: 1px;
 }
 
-.ingreso{
+.ingreso {
     border: 0;
     background-color: #725bd760;
     padding: 4.5%;
@@ -96,35 +103,120 @@ img{
     color: #F9EDE0;
 }
 
-.go_register,.go_login{
+.go_register,
+.go_login {
     font-size: 100%;
-    color:#F9EDE0;
+    color: #F9EDE0;
+}
+
+
+
+.card {
+    border: 1px solid #715BD7;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    max-width: 300px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.container {
+    background-color: #1A012F;
+
+}
+
+.hola {
+    color: #F9EDE0;
+}
+
+/*
+.container_interest{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1A012F;
+    display: flex;
+    flex-direction: column;
 }
 
 .intereses{
     font-size: larger;
     font-weight: bolder;
-    color: #715BD7;
+    color: #ffffff;
 }
 
-.intereses_box{
-    margin: 10%;
-}
 .intereses_list{
-    margin-top: 5%;
-    margin-bottom: 10%;
+    color: #f5f5f5;
+}
+*/
+.container_interest{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1A012F;
+    display: flex;
+    flex-direction: column;
 }
 
-.card {
-  border: 1px solid #715BD7;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 8px;
-  background-color: #f5f5f5;
-  max-width: 300px;
+.intereses_box input {
+    display: none;
 }
 
-.card img {
-  max-width: 100%;
-  border-radius: 8px;
+.intereses_box span {
+  display: block;           /* ocupa todo el ancho del label */
+  width: 100%;              /* iguala todos los botones */
+  text-align: center;
+  padding: 8% 0;          /* altura uniforme */
+  border-radius: 12px;
+  background-color: #715BD720;
+  color: #715BD7;
+  cursor: pointer;
+  font-size: 150%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+.intereses_box input:hover+span{
+    background-color: #1A012F;
+    color: #F9EDE0;
+    border-color: #F9EDE0;
+}
+
+.intereses_box input:checked+span {
+    background-color: #715BD7;
+    color: #1A012F;
+    border-color: #715BD7;
+}
+
+
+#intereses {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas */
+    gap: 5%;
+    /* espacio entre botones */
+
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo_header{
+    width: 10vh;
+    margin: 2%;
+}
+.creare_header{
+    padding-bottom: 1vh;
+    margin: 0;
+    font-size: 8vh;
+    line-height: 1;
+    color: #FF4848;
 }

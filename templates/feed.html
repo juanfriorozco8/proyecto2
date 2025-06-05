@@ -6,16 +6,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 <body>
-    <h1>Bienvenido, {{ usuario }}</h1>
+    <div class ="container">
+        
+        <h1 class="hola">Bienvenido, {{ usuario }}</h1>
 
-    <h2>Cursos recomendados:</h2>
-    <div id="cursos"></div>
-    <p id="mensaje"></p>
+        <h2>Cursos recomendados:</h2>
+        <div id="cursos"></div>
+        <p id="mensaje"></p>
 
-    <form action="/logout" method="get">
-        <button type="submit">Cerrar sesión</button>
-    </form>
+        <form action="/logout" method="get">
+            <button type="submit">Cerrar sesión</button>
+        </form>
 
-    <script src="{{ url_for('static', filename='js/feed.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/feed.js') }}"></script>
+    </div>
 </body>
 </html>
