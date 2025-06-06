@@ -1,9 +1,5 @@
 [
-  {"nombre": "Ana Pérez", 
-  "biografia": "Experta en fotografía con 10 años de experiencia.", 
-  "foto": "https://i.pravatar.cc/150?img=1"},
-
-  
+  {"nombre": "Ana Pérez", "biografia": "Experta en fotografía con 10 años de experiencia.", "foto": "https://i.pravatar.cc/150?img=1"},
   {"nombre": "Luis Méndez", "biografia": "Fotógrafo profesional especializado en retrato.", "foto": "https://i.pravatar.cc/150?img=11"},
   {"nombre": "Isabel García", "biografia": "Fotógrafa de naturaleza y paisajes.", "foto": "https://i.pravatar.cc/150?img=21"},
   {"nombre": "Pedro Sánchez", "biografia": "Especialista en fotografía nocturna.", "foto": "https://i.pravatar.cc/150?img=31"},

@@ -19,9 +19,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById("dificultad").textContent = curso.dificultad;
       document.getElementById("duracion").textContent = curso.duracion;
       document.getElementById("contenido").textContent = curso.contenido;
-      document.getElementById("autorNombre").textContent = curso.autor.nombre;
-      document.getElementById("autorBio").textContent = curso.autor.bio;
-      document.getElementById("autorFoto").src = curso.autor.foto || "";
+
+      const autorId = curso.impartido_por;
+      if (autorId) {
+        const resAutor = await fetch(`/api/autor/${autorId}`);
+        const autor = await resAutor.json();
+
+        if (resAutor.ok) {
+          document.getElementById("autorNombre").textContent = autor.nombre;
+          document.getElementById("autorBio").textContent = autor.bio;
+          document.getElementById("autorFoto").src = autor.foto || "";
+        }
+      }
     } else {
       mensaje.textContent = "Curso no encontrado.";
     }

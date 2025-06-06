@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <title>Curso</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
+
 <body>
-    <h1 id="tituloCurso"></h1>
-    <img id="fotoCurso" alt="Imagen del curso" width="200"/>
-    <p><strong>Categoría:</strong> <span id="categoria"></span></p>
-    <p><strong>Dificultad:</strong> <span id="dificultad"></span></p>
-    <p><strong>Duración:</strong> <span id="duracion"></span></p>
-    <p><strong>Contenido:</strong> <span id="contenido"></span></p>
+    <div class="container_curso">
+        <div class="header">
+            <div class="logo_header">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            </div>
+            <h1 class="creare_header">creare</h1>
+        </div>
+        <div class="content_curso">
+            <div class="curso_f1">
+                <img id="fotoCurso" alt="Imagen del curso" width="100%" height="100%" />
+                <h1 id="tituloCurso"></h1>
+            </div>
 
-    <h2>Autor</h2>
-    <p id="autorNombre"></p>
-    <p id="autorBio"></p>
-    <img id="autorFoto" alt="Foto del autor" width="150"/>
+            <p><strong>Categoría:</strong> <span id="categoria"></span></p>
+            <p><strong>Dificultad:</strong> <span id="dificultad"></span></p>
+            <p><strong>Duración:</strong> <span id="duracion"></span></p>
+            <p><strong>Contenido:</strong> <span id="contenido"></span></p>
 
-    <button id="btnInscribir">Inscribirme</button>
+            <h2>Autor</h2>
+            <p id="autorNombre"></p>
+            <p id="autorBio"></p>
+            <img id="autorFoto" alt="Foto del autor" width="100%" />
+
+            <button id="btnInscribir">Inscribirme</button>
+            
+            <a href="{{ url_for('feed_page') }}">← Volver a recomendaciones</a>
+        </div>
+
+
+        
+    </div>
     <p id="mensaje"></p>
-
-    <a href="{{ url_for('feed_page') }}">← Volver a recomendaciones</a>
-
     <script src="{{ url_for('static', filename='js/curso.js') }}"></script>
 </body>
+
 </html>

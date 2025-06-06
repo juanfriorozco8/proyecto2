@@ -15,24 +15,20 @@
             </div>
             <h1 class="creare_header">creare</h1>
         </div>
-        <form id="registrar_intereses">
-            <div class="intereses_list">
-                <div id="intereses"></div>
-                <!--<label class="intereses">Intereses:</label><br>
-                <div class="intereses_list">
-                    <input type="checkbox" name="intereses" value="Fotografía"> Fotografía<br>
-                    <input type="checkbox" name="intereses" value="Música"> Música<br>
-                    <input type="checkbox" name="intereses" value="Diseño Gráfico"> Diseño Gráfico<br>
-                    <input type="checkbox" name="intereses" value="Programación"> Programación<br>
-                    <input type="checkbox" name="intereses" value="Cocina"> Cocina<br>
-                    <input type="checkbox" name="intereses" value="Animación"> Animación<br>
-                    <input type="checkbox" name="intereses" value="Salud"> Salud<br>
-                    <input type="checkbox" name="intereses" value="Nutrición"> Nutrición<br>
-                </div> -->
+        <div class="centro">
+            <div class="intereses_box">
+                <form id="registrar_intereses">
+
+                    <div class="titulo_interest">
+                        <h1 class="select_interest">Selecciona tus intereses: </h1>
+                        <input class="next_interest" type="submit" value="Next -->">
+                    </div>
+                    <hr>
+                    <div id="intereses"></div>
+                </form>
             </div>
-            <input class="next" type="submit" value="Siguiente -->">
-            <p id="mensaje"></p>
-        </form>
+        </div>
+        <p id="mensaje"></p>
     </div>
     <script src="{{ url_for('static', filename='js/intereses.js') }}"></script>
 </body>

@@ -24,7 +24,8 @@ h2 {
 }
 
 .container_login,
-.container_reg {
+.container_reg,
+.container_interest {
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -77,14 +78,13 @@ img {
     padding: 5%;
 }
 
-.next {
+.next,
+.next_interest {
     font-size: 100%;
-    border-color: #FF4848;
     font-weight: bolder;
     margin-top: 30%;
     margin: 15%;
     margin-left: 0;
-
     padding: 7%;
     padding-right: 13%;
     color: #F9EDE0;
@@ -153,39 +153,39 @@ img {
     color: #f5f5f5;
 }
 */
-.container_interest{
-    height: 100vh;
-    width: 100vw;
+
+.container_interest {
     background-color: #1A012F;
-    display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
-.intereses_box input {
+.interes input {
     display: none;
 }
 
-.intereses_box span {
-  display: block;           /* ocupa todo el ancho del label */
-  width: 100%;              /* iguala todos los botones */
-  text-align: center;
-  padding: 8% 0;          /* altura uniforme */
-  border-radius: 12px;
-  background-color: #715BD720;
-  color: #715BD7;
-  cursor: pointer;
-  font-size: 150%;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  box-sizing: border-box;
+.interes span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8% 0;
+    border-radius: 12px;
+    background-color: #715BD720;
+    color: #715BD7;
+    cursor: pointer;
+    font-size: 150%;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-sizing: border-box;
 }
-.intereses_box input:hover+span{
+
+.interes input:hover+span {
     background-color: #1A012F;
     color: #F9EDE0;
     border-color: #F9EDE0;
 }
 
-.intereses_box input:checked+span {
+.interes input:checked+span {
     background-color: #715BD7;
     color: #1A012F;
     border-color: #715BD7;
@@ -193,30 +193,118 @@ img {
 
 
 #intereses {
-    padding-left: 15%;
-    padding-right: 15%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 columnas */
     gap: 5%;
-    /* espacio entre botones */
-
     margin: 0 auto;
+    margin-left: 5%;
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 15vh;
+    position:sticky;
+    top:0;
 }
-.logo_header{
+
+.logo_header {
     width: 10vh;
     margin: 2%;
 }
-.creare_header{
-    padding-bottom: 1vh;
+.content_curso{
+    height: 85vh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.creare_header {
+    padding-bottom: 2vh;
     margin: 0;
     font-size: 8vh;
-    line-height: 1;
     color: #FF4848;
+}
+
+.titulo_interest {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.select_interest {
+    color: #F9EDE0;
+    font-size: 300%;
+}
+
+.next_interest {
+    margin: 0;
+    padding: 1%;
+    font-size: 130%;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #F9EDE0;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.intereses_box {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centro {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    height: 85vh;
+    box-sizing: border-box;
+    padding-bottom: 5%;
+}
+
+.next_interest:hover {
+    background-color: #715BD7;
+    color: #F9EDE0;
+}
+
+.container_course {
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+}
+
+.curso_f1 {
+    height: 85vh;
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    align-items: baseline;
+    background-color: #1A012F;
+
+}
+
+.curso_f1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+#tituloCurso {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    font-size: 24px;
+    z-index: 1;
+}
+
+body::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Edge */
 }

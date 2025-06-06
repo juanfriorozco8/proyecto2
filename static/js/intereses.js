@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registrar_intereses");
   const mensaje = document.getElementById("mensaje");
+  const submitBtn = document.querySelector(".next_interest");
+
+  submitBtn.style.display = "none";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mensaje.textContent = "Registro exitoso 🎉";
         mensaje.style.color = "green";
         form.reset();
+        submitBtn.style.display = "none"; 
         setTimeout(() => {
           window.location.href = "/feed";
         }, 1500);
@@ -36,30 +40,38 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(err);
     }
   });
-});
 
-const intereses = [
-  "Diseño Gráfico", "Ilustración", "Fotografía",
-  "Animación", "Escritura creativa", "Música",
-  "Programación", "Dibujo", "Escultura",
-  "Tejer", "Joyería", "Cocina"
-];
+  const intereses = [
+    "Diseño Gráfico", "Ilustración", "Fotografía",
+    "Animación", "Escritura creativa", "Música",
+    "Programación", "Dibujo", "Escultura",
+    "Tejer", "Joyería", "Cocina"
+  ];
 
-const contenedor = document.getElementById("intereses");
+  const contenedor = document.getElementById("intereses");
 
-intereses.forEach(interes => {
-  const label = document.createElement("label");
-  label.className = "intereses_box";
+  intereses.forEach(interes => {
+    const label = document.createElement("label");
+    label.className = "interes";
 
-  const input = document.createElement("input");
-  input.type = "checkbox";
-  input.name = "intereses";
-  input.value = interes;
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.name = "intereses";
+    input.value = interes;
 
-  const span = document.createElement("span");
-  span.textContent = interes;
+    const span = document.createElement("span");
+    span.textContent = interes;
 
-  label.appendChild(input);
-  label.appendChild(span);
-  contenedor.appendChild(label);
+    label.appendChild(input);
+    label.appendChild(span);
+    contenedor.appendChild(label);
+  });
+
+  const checkboxes = document.querySelectorAll('input[name="intereses"]');
+  checkboxes.forEach(cb => {
+    cb.addEventListener("change", () => {
+      const algunoMarcado = Array.from(checkboxes).some(cb => cb.checked);
+      submitBtn.style.display = algunoMarcado ? "inline-block" : "none";
+    });
+  });
 });
