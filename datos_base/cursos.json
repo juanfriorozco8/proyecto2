@@ -1,329 +1,1636 @@
 [
   {
-    "titulo": "Fotografía Básica",
-    "categoria": "Fotografía",
+    "titulo": "Introducción al Diseño Gráfico",
+    "etiquetas": ["Diseño Gráfico"],
     "dificultad": "Principiante",
-    "duracion": "4 horas",
-    "contenido": "Introducción a cámaras, composición y edición básica.",
-    "autor": "Ana Pérez",
-    "foto": "https://picsum.photos/200/300?random=1",
-    "etiquetas": ["Fotografía"]
+    "duracion": "12 horas",
+    "contenido": "Contenido completo del curso introductorio al diseño gráfico moderno.",
+    "autor": "Carla Méndez",
+    "foto": "https://picsum.photos/200/300?random=dg1"
   },
   {
-    "titulo": "Retrato Profesional",
-    "categoria": "Fotografía",
-    "dificultad": "Intermedio",
-    "duracion": "6 horas",
-    "contenido": "Técnicas avanzadas para retratos y uso de luz.",
-    "autor": "Luis Méndez",
-    "foto": "https://picsum.photos/200/300?random=2",
-    "etiquetas": ["Fotografía"]
+    "titulo": "Photoshop desde Cero",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Principiante",
+    "duracion": "14 horas",
+    "contenido": "Contenido completo para aprender Adobe Photoshop desde cero.",
+    "autor": "Carla Méndez",
+    "foto": "https://picsum.photos/200/300?random=dg2"
   },
   {
-    "titulo": "Fotografía de Naturaleza",
-    "categoria": "Fotografía",
-    "dificultad": "Intermedio",
-    "duracion": "7 horas",
-    "contenido": "Captura de paisajes y fauna con técnicas avanzadas.",
-    "autor": "Isabel García",
-    "foto": "https://picsum.photos/200/300?random=3",
-    "etiquetas": ["Fotografía"]
-  },
-  {
-    "titulo": "Fotografía Nocturna",
-    "categoria": "Fotografía",
+    "titulo": "Diseño Editorial con InDesign",
+    "etiquetas": ["Diseño Gráfico"],
     "dificultad": "Avanzado",
+    "duracion": "15 horas",
+    "contenido": "Contenido completo sobre diagramación y diseño editorial profesional.",
+    "autor": "Verónica Ríos",
+    "foto": "https://picsum.photos/200/300?random=dg3"
+  },
+  {
+    "titulo": "Diseño Publicitario Profesional",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Intermedio",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo del curso sobre diseño de piezas publicitarias efectivas.",
+    "autor": "Carlos Pinto",
+    "foto": "https://picsum.photos/200/300?random=dg4"
+  },
+  {
+    "titulo": "Diseño para Branding Personal",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Principiante",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo para construir una identidad visual personal.",
+    "autor": "Carlos Pinto",
+    "foto": "https://picsum.photos/200/300?random=dg5"
+  },
+  {
+    "titulo": "Tipografía Moderna para Diseñadores",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo del curso sobre tipografía contemporánea y legibilidad.",
+    "autor": "Luis Moreno",
+    "foto": "https://picsum.photos/200/300?random=dg6"
+  },
+  {
+    "titulo": "Teoría del Color en Proyectos Creativos",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Principiante",
     "duracion": "8 horas",
-    "contenido": "Técnicas para fotografía en condiciones de poca luz.",
-    "autor": "Pedro Sánchez",
-    "foto": "https://picsum.photos/200/300?random=4",
-    "etiquetas": ["Fotografía"]
+    "contenido": "Contenido completo sobre el uso y combinación de colores en diseño.",
+    "autor": "Daniela Lozano",
+    "foto": "https://picsum.photos/200/300?random=dg7"
   },
 
   {
-    "titulo": "Producción Musical desde Cero",
-    "categoria": "Música",
+    "titulo": "Diseño de Identidad Visual",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Intermedio",
+    "duracion": "16 horas",
+    "contenido": "Contenido completo sobre creación de logotipos y sistemas visuales.",
+    "autor": "Laura Castillo",
+    "foto": "https://picsum.photos/200/300?random=dg8"
+  },
+  {
+    "titulo": "Diseño Gráfico con Canva para Redes Sociales",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo para diseñar fácilmente usando Canva.",
+    "autor": "Andrea Salazar",
+    "foto": "https://picsum.photos/200/300?random=dg9"
+  },
+  {
+    "titulo": "Diseño de Portafolios Creativos",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo para crear un portafolio visual profesional.",
+    "autor": "Santiago Navarro",
+    "foto": "https://picsum.photos/200/300?random=dg10"
+  },
+  {
+    "titulo": "Ilustración Digital para Diseñadores",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Intermedio",
+    "duracion": "13 horas",
+    "contenido": "Contenido completo para complementar diseño con ilustración digital.",
+    "autor": "Javier Durán",
+    "foto": "https://picsum.photos/200/300?random=dg11"
+  },
+  {
+    "titulo": "Diseño Gráfico con Illustrator",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Principiante",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo del curso sobre herramientas vectoriales en Illustrator.",
+    "autor": "Lucía Cárdenas",
+    "foto": "https://picsum.photos/200/300?random=dg12"
+  },
+  {
+    "titulo": "Composición Visual y Jerarquía",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Principiante",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre principios de jerarquía visual en diseño.",
+    "autor": "Natalia Prieto",
+    "foto": "https://picsum.photos/200/300?random=dg13"
+  },
+  {
+    "titulo": "Diseño de Interfaces para Apps",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre diseño UI para aplicaciones móviles.",
+    "autor": "Esteban Vega",
+    "foto": "https://picsum.photos/200/300?random=dg14"
+  },
+  {
+    "titulo": "Diseño Gráfico Avanzado con Figma",
+    "etiquetas": ["Diseño Gráfico"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo del curso de diseño profesional con Figma.",
+    "autor": "Sebastián Beltrán",
+    "foto": "https://picsum.photos/200/300?random=dg15"
+  },
+  {
+    "titulo": "Fundamentos de la Animación 2D",
+    "etiquetas": ["Animación"],
+    "dificultad": "Principiante",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre los principios básicos de la animación 2D tradicional.",
+    "autor": "Alejandro Rivera",
+    "foto": "https://picsum.photos/200/300?random=an1"
+  },
+  {
+    "titulo": "Introducción a After Effects",
+    "etiquetas": ["Animación"],
+    "dificultad": "Principiante",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para aprender las herramientas básicas de After Effects.",
+    "autor": "Laura Espinoza",
+    "foto": "https://picsum.photos/200/300?random=an2"
+  },
+  {
+    "titulo": "Animación de Personajes 2D",
+    "etiquetas": ["Animación"],
+    "dificultad": "Intermedio",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre creación y animación de personajes en 2D.",
+    "autor": "Alejandro Rivera",
+    "foto": "https://picsum.photos/200/300?random=an3"
+  },
+  {
+    "titulo": "Técnicas de Stop Motion",
+    "etiquetas": ["Animación"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo del curso sobre creación de animaciones en stop motion.",
+    "autor": "Valeria Menéndez",
+    "foto": "https://picsum.photos/200/300?random=an4"
+  },
+  {
+    "titulo": "Animación con Photoshop",
+    "etiquetas": ["Animación"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre animaciones cuadro por cuadro en Photoshop.",
+    "autor": "Laura Espinoza",
+    "foto": "https://picsum.photos/200/300?random=an5"
+  },
+  {
+    "titulo": "Rigging y Movimiento Corporal",
+    "etiquetas": ["Animación"],
+    "dificultad": "Avanzado",
+    "duracion": "14 horas",
+    "contenido": "Contenido completo sobre rigging y animación corporal compleja.",
+    "autor": "Camilo Suárez",
+    "foto": "https://picsum.photos/200/300?random=an6"
+  },
+  {
+    "titulo": "Animación 3D con Blender",
+    "etiquetas": ["Animación"],
+    "dificultad": "Intermedio",
+    "duracion": "13 horas",
+    "contenido": "Contenido completo sobre creación de animaciones 3D con Blender.",
+    "autor": "Sofía Zamora",
+    "foto": "https://picsum.photos/200/300?random=an7"
+  },
+  {
+    "titulo": "Cinemáticas en Videojuegos",
+    "etiquetas": ["Animación"],
+    "dificultad": "Avanzado",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre animación de cinemáticas para videojuegos.",
+    "autor": "Camilo Suárez",
+    "foto": "https://picsum.photos/200/300?random=an8"
+  },
+  {
+    "titulo": "Storyboard para Animación",
+    "etiquetas": ["Animación"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo para aprender a planificar secuencias animadas.",
+    "autor": "Natalia Gómez",
+    "foto": "https://picsum.photos/200/300?random=an9"
+  },
+  {
+    "titulo": "Animación para Redes Sociales",
+    "etiquetas": ["Animación"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre piezas animadas para plataformas digitales.",
+    "autor": "Laura Espinoza",
+    "foto": "https://picsum.photos/200/300?random=an10"
+  },
+  {
+    "titulo": "Principios de Animación de Disney",
+    "etiquetas": ["Animación"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre los 12 principios clásicos de animación de Disney.",
+    "autor": "Alejandro Rivera",
+    "foto": "https://picsum.photos/200/300?random=an11"
+  },
+  {
+    "titulo": "Motion Graphics con After Effects",
+    "etiquetas": ["Animación"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre creación de motion graphics para video y publicidad.",
+    "autor": "Diego Castañeda",
+    "foto": "https://picsum.photos/200/300?random=an12"
+  },
+  {
+    "titulo": "Lipsync para Animación de Diálogos",
+    "etiquetas": ["Animación"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre sincronización labial en personajes animados.",
+    "autor": "Camilo Suárez",
+    "foto": "https://picsum.photos/200/300?random=an13"
+  },
+  {
+    "titulo": "Animación Experimental",
+    "etiquetas": ["Animación"],
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre técnicas y estilos no convencionales en animación.",
+    "autor": "Valeria Menéndez",
+    "foto": "https://picsum.photos/200/300?random=an14"
+  },
+  {
+    "titulo": "Animación 3D para Principiantes",
+    "etiquetas": ["Animación"],
+    "dificultad": "Principiante",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo para iniciar en el mundo de la animación 3D.",
+    "autor": "Sofía Zamora",
+    "foto": "https://picsum.photos/200/300?random=an15"
+  },
+  {
+    "titulo": "Introducción a la Programación en Python",
+    "etiquetas": ["Programación"],
+    "dificultad": "Principiante",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo para aprender los fundamentos de programación usando Python.",
+    "autor": "Mariana Ríos",
+    "foto": "https://picsum.photos/200/300?random=pr1"
+  },
+  {
+    "titulo": "Programación Orientada a Objetos en Java",
+    "etiquetas": ["Programación"],
+    "dificultad": "Intermedio",
+    "duracion": "14 horas",
+    "contenido": "Contenido completo del curso sobre conceptos y aplicación de POO en Java.",
+    "autor": "Luis Montero",
+    "foto": "https://picsum.photos/200/300?random=pr2"
+  },
+  {
+    "titulo": "Estructuras de Datos en C++",
+    "etiquetas": ["Programación"],
+    "dificultad": "Avanzado",
+    "duracion": "16 horas",
+    "contenido": "Contenido completo sobre implementación de estructuras de datos en C++.",
+    "autor": "Ana Herrera",
+    "foto": "https://picsum.photos/200/300?random=pr3"
+  },
+  {
+    "titulo": "Lógica de Programación desde Cero",
+    "etiquetas": ["Programación"],
+    "dificultad": "Principiante",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre lógica computacional y resolución de problemas.",
+    "autor": "Carlos Ayala",
+    "foto": "https://picsum.photos/200/300?random=pr4"
+  },
+  {
+    "titulo": "Desarrollo Web con HTML, CSS y JS",
+    "etiquetas": ["Programación"],
+    "dificultad": "Principiante",
+    "duracion": "13 horas",
+    "contenido": "Contenido completo sobre creación de páginas web modernas.",
+    "autor": "Mariana Ríos",
+    "foto": "https://picsum.photos/200/300?random=pr5"
+  },
+  {
+    "titulo": "Automatización de Tareas con Python",
+    "etiquetas": ["Programación"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo para automatizar procesos repetitivos usando scripts en Python.",
+    "autor": "Samuel Guzmán",
+    "foto": "https://picsum.photos/200/300?random=pr6"
+  },
+  {
+    "titulo": "Desarrollo de APIs REST con Flask",
+    "etiquetas": ["Programación"],
+    "dificultad": "Intermedio",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre creación de APIs web con Python y Flask.",
+    "autor": "Samuel Guzmán",
+    "foto": "https://picsum.photos/200/300?random=pr7"
+  },
+  {
+    "titulo": "Fundamentos de Algoritmos",
+    "etiquetas": ["Programación"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre análisis y diseño de algoritmos clásicos.",
+    "autor": "Luis Montero",
+    "foto": "https://picsum.photos/200/300?random=pr8"
+  },
+  {
+    "titulo": "Programación en C para Microcontroladores",
+    "etiquetas": ["Programación"],
+    "dificultad": "Avanzado",
+    "duracion": "14 horas",
+    "contenido": "Contenido completo sobre programación embebida en C para hardware.",
+    "autor": "Ana Herrera",
+    "foto": "https://picsum.photos/200/300?random=pr9"
+  },
+  {
+    "titulo": "Desarrollo Frontend con React",
+    "etiquetas": ["Programación"],
+    "dificultad": "Avanzado",
+    "duracion": "13 horas",
+    "contenido": "Contenido completo sobre creación de interfaces web dinámicas con React.",
+    "autor": "Carlos Ayala",
+    "foto": "https://picsum.photos/200/300?random=pr10"
+  },
+  {
+    "titulo": "Introducción a Bases de Datos con SQL",
+    "etiquetas": ["Programación"],
+    "dificultad": "Principiante",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre diseño, consultas y gestión de bases de datos SQL.",
+    "autor": "Mariana Ríos",
+    "foto": "https://picsum.photos/200/300?random=pr11"
+  },
+  {
+    "titulo": "Fundamentos de Desarrollo Móvil con Flutter",
+    "etiquetas": ["Programación"],
+    "dificultad": "Intermedio",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre creación de apps móviles multiplataforma.",
+    "autor": "Samuel Guzmán",
+    "foto": "https://picsum.photos/200/300?random=pr12"
+  },
+  {
+    "titulo": "Desarrollo Backend con Node.js",
+    "etiquetas": ["Programación"],
+    "dificultad": "Intermedio",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre programación del lado del servidor con Node.js.",
+    "autor": "Luis Montero",
+    "foto": "https://picsum.photos/200/300?random=pr13"
+  },
+  {
+    "titulo": "Seguridad Informática y Programación Segura",
+    "etiquetas": ["Programación"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre prácticas de seguridad y protección de código.",
+    "autor": "Ana Herrera",
+    "foto": "https://picsum.photos/200/300?random=pr14"
+  },
+  {
+    "titulo": "Programación Funcional en JavaScript",
+    "etiquetas": ["Programación"],
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo del curso sobre técnicas funcionales en JavaScript moderno.",
+    "autor": "Carlos Ayala",
+    "foto": "https://picsum.photos/200/300?random=pr15"
+  },
+  {
+    "titulo": "Ilustración Digital para Principiantes",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Principiante",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo para comenzar a ilustrar en medios digitales desde cero.",
+    "autor": "Daniela Paredes",
+    "foto": "https://picsum.photos/200/300?random=il1"
+  },
+  {
+    "titulo": "Técnicas de Dibujo a Mano Alzada",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Principiante",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre técnicas tradicionales de dibujo a lápiz y tinta.",
+    "autor": "Julio Barragán",
+    "foto": "https://picsum.photos/200/300?random=il2"
+  },
+  {
+    "titulo": "Color y Sombra en Ilustración Digital",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre teoría del color, luces y sombras aplicadas al arte digital.",
+    "autor": "Daniela Paredes",
+    "foto": "https://picsum.photos/200/300?random=il3"
+  },
+  {
+    "titulo": "Ilustración Infantil para Editorial",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para crear ilustraciones dirigidas a público infantil.",
+    "autor": "Sofía Alarcón",
+    "foto": "https://picsum.photos/200/300?random=il4"
+  },
+  {
+    "titulo": "Sketching Urbano y Arquitectónico",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre ilustración de espacios urbanos y estructuras.",
+    "autor": "Julio Barragán",
+    "foto": "https://picsum.photos/200/300?random=il5"
+  },
+  {
+    "titulo": "Ilustración con Acuarela Moderna",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre técnicas contemporáneas de ilustración con acuarela.",
+    "autor": "Sofía Alarcón",
+    "foto": "https://picsum.photos/200/300?random=il6"
+  },
+  {
+    "titulo": "Creación de Personajes Ilustrados",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre diseño y desarrollo visual de personajes únicos.",
+    "autor": "Daniela Paredes",
+    "foto": "https://picsum.photos/200/300?random=il7"
+  },
+  {
+    "titulo": "Narrativa Visual e Ilustración Secuencial",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Avanzado",
+    "duracion": "13 horas",
+    "contenido": "Contenido completo sobre cómo contar historias a través de ilustraciones secuenciales.",
+    "autor": "Julio Barragán",
+    "foto": "https://picsum.photos/200/300?random=il8"
+  },
+  {
+    "titulo": "Ilustración Botánica y Científica",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre técnicas detalladas para representar plantas y organismos.",
+    "autor": "Lucía Treviño",
+    "foto": "https://picsum.photos/200/300?random=il9"
+  },
+  {
+    "titulo": "Ilustración de Moda",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre cómo crear ilustraciones estilizadas de ropa y modelos.",
+    "autor": "Sofía Alarcón",
+    "foto": "https://picsum.photos/200/300?random=il10"
+  },
+  {
+    "titulo": "Composición y Enfoque Visual en Ilustración",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Avanzado",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre reglas de composición, balance visual y narrativa en la ilustración.",
+    "autor": "Lucía Treviño",
+    "foto": "https://picsum.photos/200/300?random=il11"
+  },
+  {
+    "titulo": "Ilustración Editorial para Revistas",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre creación de ilustraciones para artículos y publicaciones.",
+    "autor": "Daniela Paredes",
+    "foto": "https://picsum.photos/200/300?random=il12"
+  },
+  {
+    "titulo": "Fundamentos del Dibujo Anatómico",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre proporciones humanas y estructura anatómica para artistas.",
+    "autor": "Julio Barragán",
+    "foto": "https://picsum.photos/200/300?random=il13"
+  },
+  {
+    "titulo": "Ilustración de Paisajes Digitales",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Intermedio",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre cómo ilustrar entornos y escenarios naturales en digital.",
+    "autor": "Lucía Treviño",
+    "foto": "https://picsum.photos/200/300?random=il14"
+  },
+  {
+    "titulo": "Técnicas Mixtas para Ilustradores",
+    "etiquetas": ["Ilustración"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre combinación de técnicas tradicionales y digitales en ilustración.",
+    "autor": "Sofía Alarcón",
+    "foto": "https://picsum.photos/200/300?random=il15"
+  },
+  {
+    "titulo": "Escritura Creativa desde Cero",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Principiante",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para desarrollar ideas y desbloquear tu creatividad al escribir.",
+    "autor": "Paula Méndez",
+    "foto": "https://picsum.photos/200/300?random=ec1"
+  },
+  {
+    "titulo": "Narrativa de Cuento Corto",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre estructura, ritmo y resolución de cuentos cortos.",
+    "autor": "Gabriel Cordero",
+    "foto": "https://picsum.photos/200/300?random=ec2"
+  },
+  {
+    "titulo": "Construcción de Personajes Memorables",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo para diseñar personajes profundos y convincentes.",
+    "autor": "Laura González",
+    "foto": "https://picsum.photos/200/300?random=ec3"
+  },
+  {
+    "titulo": "Escritura de Diálogos Realistas",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Avanzado",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para dominar la escritura de diálogos fluidos y naturales.",
+    "autor": "Gabriel Cordero",
+    "foto": "https://picsum.photos/200/300?random=ec4"
+  },
+  {
+    "titulo": "Poesía Moderna: Forma y Estilo",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre técnicas de poesía libre, ritmo y metáfora.",
+    "autor": "Isabel Moreno",
+    "foto": "https://picsum.photos/200/300?random=ec5"
+  },
+  {
+    "titulo": "Escritura Creativa para Blogs",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre redacción creativa para medios digitales y blogs personales.",
+    "autor": "Paula Méndez",
+    "foto": "https://picsum.photos/200/300?random=ec6"
+  },
+  {
+    "titulo": "Taller de Microficción",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre escritura de historias ultracortas con impacto.",
+    "autor": "Laura González",
+    "foto": "https://picsum.photos/200/300?random=ec7"
+  },
+  {
+    "titulo": "Guionismo para Cine y Televisión",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre formato, estructura y diálogo en guiones cinematográficos.",
+    "autor": "Diego Velasco",
+    "foto": "https://picsum.photos/200/300?random=ec8"
+  },
+  {
+    "titulo": "El Arte del Ensayo Literario",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre escritura crítica y reflexiva desde la perspectiva personal.",
+    "autor": "Isabel Moreno",
+    "foto": "https://picsum.photos/200/300?random=ec9"
+  },
+  {
+    "titulo": "Planificación de Novelas",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Avanzado",
+    "duracion": "14 horas",
+    "contenido": "Contenido completo sobre estructura narrativa, tramas y desarrollo a largo plazo.",
+    "autor": "Laura González",
+    "foto": "https://picsum.photos/200/300?random=ec10"
+  },
+  {
+    "titulo": "Técnicas de Escritura Autobiográfica",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre narrar vivencias personales con intención literaria.",
+    "autor": "Paula Méndez",
+    "foto": "https://picsum.photos/200/300?random=ec11"
+  },
+  {
+    "titulo": "Escritura Experimental y Creatividad",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre técnicas no convencionales de narración.",
+    "autor": "Isabel Moreno",
+    "foto": "https://picsum.photos/200/300?random=ec12"
+  },
+  {
+    "titulo": "Escritura de Suspenso y Misterio",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Avanzado",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre crear tensión, giros y atmósferas intrigantes.",
+    "autor": "Gabriel Cordero",
+    "foto": "https://picsum.photos/200/300?random=ec13"
+  },
+  {
+    "titulo": "Creatividad Narrativa para Jóvenes",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo para adolescentes interesados en contar historias.",
+    "autor": "Laura González",
+    "foto": "https://picsum.photos/200/300?random=ec14"
+  },
+  {
+    "titulo": "Escritura Creativa para Juegos de Rol",
+    "etiquetas": ["Escritura Creativa"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre narrativa dinámica y diseño de mundos para RPGs.",
+    "autor": "Diego Velasco",
+    "foto": "https://picsum.photos/200/300?random=ec15"
+  },
+  {
+    "titulo": "Dibujo a Lápiz para Principiantes",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre técnicas básicas de dibujo con lápiz.",
+    "autor": "Elena Navarro",
+    "foto": "https://picsum.photos/200/300?random=db1"
+  },
+  {
+    "titulo": "Sombreado y Volumen en Dibujo",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre creación de sombras, luces y profundidad.",
+    "autor": "Julián Herrera",
+    "foto": "https://picsum.photos/200/300?random=db2"
+  },
+  {
+    "titulo": "Retrato Realista a Mano",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre proporciones faciales, detalles y expresión.",
+    "autor": "Mariana Ríos",
+    "foto": "https://picsum.photos/200/300?random=db3"
+  },
+  {
+    "titulo": "Fundamentos del Dibujo Anatómico",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre estructura del cuerpo humano en dibujo artístico.",
+    "autor": "Luis Miguel Ortega",
+    "foto": "https://picsum.photos/200/300?random=db4"
+  },
+  {
+    "titulo": "Dibujo de Paisajes Naturales",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre composición y perspectiva en exteriores.",
+    "autor": "Elena Navarro",
+    "foto": "https://picsum.photos/200/300?random=db5"
+  },
+  {
+    "titulo": "Bocetaje Rápido y Expresivo",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Intermedio",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre técnicas de sketch y dinamismo en líneas.",
+    "autor": "Julián Herrera",
+    "foto": "https://picsum.photos/200/300?random=db6"
+  },
+  {
+    "titulo": "Dibujo Digital con Tableta Gráfica",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Principiante",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre herramientas y técnicas básicas en digital.",
+    "autor": "Andrea Suárez",
+    "foto": "https://picsum.photos/200/300?random=db7"
+  },
+  {
+    "titulo": "Diseño de Personajes Ilustrados",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo para crear personajes únicos y estilizados.",
+    "autor": "Mariana Ríos",
+    "foto": "https://picsum.photos/200/300?random=db8"
+  },
+  {
+    "titulo": "Dibujo con Tinta y Plumilla",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Avanzado",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre técnicas tradicionales de ilustración en tinta.",
+    "autor": "Luis Miguel Ortega",
+    "foto": "https://picsum.photos/200/300?random=db9"
+  },
+  {
+    "titulo": "Perspectiva en Dibujo Arquitectónico",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre puntos de fuga, profundidad y estructuras.",
+    "autor": "Andrea Suárez",
+    "foto": "https://picsum.photos/200/300?random=db10"
+  },
+  {
+    "titulo": "Dibujo de Animales en Movimiento",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre anatomía animal y acción en el trazo.",
+    "autor": "Julián Herrera",
+    "foto": "https://picsum.photos/200/300?random=db11"
+  },
+  {
+    "titulo": "Introducción al Dibujo Manga",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre estilo japonés, rostros, ojos y expresiones.",
+    "autor": "Andrea Suárez",
+    "foto": "https://picsum.photos/200/300?random=db12"
+  },
+  {
+    "titulo": "Técnicas de Dibujo con Carboncillo",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre sombreado suave, trazos gruesos y contraste.",
+    "autor": "Mariana Ríos",
+    "foto": "https://picsum.photos/200/300?random=db13"
+  },
+  {
+    "titulo": "Retrato Creativo y Estilizado",
+    "etiquetas": ["Dibujo"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre retratos conceptuales y arte expresivo.",
+    "autor": "Elena Navarro",
+    "foto": "https://picsum.photos/200/300?random=db14"
+  },
+  {
+    "titulo": "Fundamentos del Dibujo Infantil",
+    "etiquetas": ["Dibujo"],
     "dificultad": "Principiante",
     "duracion": "5 horas",
-    "contenido": "Cómo producir música usando software profesional.",
-    "autor": "Carlos López",
-    "foto": "https://picsum.photos/200/300?random=5",
-    "etiquetas": ["Música"]
+    "contenido": "Contenido completo para enseñar a niños cómo dibujar con diversión.",
+    "autor": "Andrea Suárez",
+    "foto": "https://picsum.photos/200/300?random=db15"
+  }, 
+  {
+    "titulo": "Fotografía Digital para Principiantes",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo para aprender a usar cámaras digitales y componer fotos básicas.",
+    "autor": "Martín Calderón",
+    "foto": "https://picsum.photos/200/300?random=ph1"
   },
   {
-    "titulo": "Composición y Arreglo",
-    "categoria": "Música",
-    "dificultad": "Avanzado",
+    "titulo": "Composición Fotográfica Creativa",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Intermedio",
     "duracion": "8 horas",
-    "contenido": "Aprende a crear composiciones complejas y arreglos musicales.",
-    "autor": "María Torres",
-    "foto": "https://picsum.photos/200/300?random=6",
-    "etiquetas": ["Música"]
+    "contenido": "Contenido completo sobre reglas de composición, encuadre y narrativa visual.",
+    "autor": "Lucía Varela",
+    "foto": "https://picsum.photos/200/300?random=ph2"
   },
   {
-    "titulo": "Ingeniería de Sonido",
-    "categoria": "Música",
-    "dificultad": "Intermedio",
-    "duracion": "7 horas",
-    "contenido": "Grabación y edición de audio profesional.",
-    "autor": "Javier Ruiz",
-    "foto": "https://picsum.photos/200/300?random=7",
-    "etiquetas": ["Música"]
-  },
-  {
-    "titulo": "Piano para Principiantes",
-    "categoria": "Música",
-    "dificultad": "Principiante",
-    "duracion": "4 horas",
-    "contenido": "Técnicas básicas para aprender piano desde cero.",
-    "autor": "Lucía Fernández",
-    "foto": "https://picsum.photos/200/300?random=8",
-    "etiquetas": ["Música"]
-  },
-
-  {
-    "titulo": "Diseño Digital para Principiantes",
-    "categoria": "Diseño Gráfico",
-    "dificultad": "Principiante",
-    "duracion": "4 horas",
-    "contenido": "Fundamentos del diseño y herramientas digitales básicas.",
-    "autor": "Jorge Ruiz",
-    "foto": "https://picsum.photos/200/300?random=9",
-    "etiquetas": ["Diseño Gráfico"]
-  },
-  {
-    "titulo": "Branding y Marca Personal",
-    "categoria": "Diseño Gráfico",
-    "dificultad": "Intermedio",
-    "duracion": "7 horas",
-    "contenido": "Construcción y estrategia para marcas personales.",
-    "autor": "Sofía Martínez",
-    "foto": "https://picsum.photos/200/300?random=10",
-    "etiquetas": ["Diseño Gráfico"]
-  },
-  {
-    "titulo": "Ilustración Digital",
-    "categoria": "Diseño Gráfico",
+    "titulo": "Fotografía en Blanco y Negro",
+    "etiquetas": ["Fotografía"],
     "dificultad": "Intermedio",
     "duracion": "6 horas",
-    "contenido": "Técnicas para crear ilustraciones digitales profesionales.",
-    "autor": "Marcos Díaz",
-    "foto": "https://picsum.photos/200/300?random=11",
-    "etiquetas": ["Diseño Gráfico"]
+    "contenido": "Contenido completo sobre contraste, textura y luces en blanco y negro.",
+    "autor": "Martín Calderón",
+    "foto": "https://picsum.photos/200/300?random=ph3"
   },
   {
-    "titulo": "Diseño Editorial",
-    "categoria": "Diseño Gráfico",
+    "titulo": "Edición Fotográfica con Lightroom",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre retoque digital, color y exportación profesional.",
+    "autor": "Camila Torres",
+    "foto": "https://picsum.photos/200/300?random=ph4"
+  },
+  {
+    "titulo": "Fotografía de Paisajes Naturales",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre luz natural, enfoque y composición en exteriores.",
+    "autor": "Jorge Medina",
+    "foto": "https://picsum.photos/200/300?random=ph5"
+  },
+  {
+    "titulo": "Retrato Profesional en Estudio",
+    "etiquetas": ["Fotografía"],
     "dificultad": "Avanzado",
-    "duracion": "8 horas",
-    "contenido": "Diseño y composición para medios impresos y digitales.",
-    "autor": "Clara Gómez",
-    "foto": "https://picsum.photos/200/300?random=12",
-    "etiquetas": ["Diseño Gráfico"]
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre iluminación de estudio, dirección y poses.",
+    "autor": "Lucía Varela",
+    "foto": "https://picsum.photos/200/300?random=ph6"
   },
-
   {
-    "titulo": "Python para Web",
-    "categoria": "Programación",
+    "titulo": "Fotografía Nocturna y de Larga Exposición",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre estrellas, ciudades nocturnas y técnicas avanzadas.",
+    "autor": "Jorge Medina",
+    "foto": "https://picsum.photos/200/300?random=ph7"
+  },
+  {
+    "titulo": "Fotografía Móvil Creativa",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Contenido completo para capturar imágenes impactantes con tu celular.",
+    "autor": "Camila Torres",
+    "foto": "https://picsum.photos/200/300?random=ph8"
+  },
+  {
+    "titulo": "Documental Fotográfico",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Avanzado",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre narrativa fotográfica y trabajo de campo.",
+    "autor": "Lucía Varela",
+    "foto": "https://picsum.photos/200/300?random=ph9"
+  },
+  {
+    "titulo": "Fotografía de Productos para E-commerce",
+    "etiquetas": ["Fotografía"],
     "dificultad": "Intermedio",
     "duracion": "8 horas",
-    "contenido": "Creación de aplicaciones web con Flask y Django.",
+    "contenido": "Contenido completo sobre iluminación, encuadre y edición para tiendas online.",
+    "autor": "Camila Torres",
+    "foto": "https://picsum.photos/200/300?random=ph10"
+  },
+  {
+    "titulo": "Introducción al Fotoperiodismo",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre fotografía en contexto de noticias y eventos sociales.",
+    "autor": "Martín Calderón",
+    "foto": "https://picsum.photos/200/300?random=ph11"
+  },
+  {
+    "titulo": "Fotografía de Bodas y Eventos",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre organización, storytelling y técnicas para eventos.",
+    "autor": "Lucía Varela",
+    "foto": "https://picsum.photos/200/300?random=ph12"
+  },
+  {
+    "titulo": "Fotografía de Comida para Redes Sociales",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre fotografía culinaria con celular o cámara digital.",
+    "autor": "Camila Torres",
+    "foto": "https://picsum.photos/200/300?random=ph13"
+  },
+  {
+    "titulo": "Taller de Fotografía Urbana",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre exploración de espacios urbanos y narrativa visual.",
+    "autor": "Jorge Medina",
+    "foto": "https://picsum.photos/200/300?random=ph14"
+  },
+  {
+    "titulo": "Fotografía Artística y Conceptual",
+    "etiquetas": ["Fotografía"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre creación de obras visuales con intención artística.",
+    "autor": "Martín Calderón",
+    "foto": "https://picsum.photos/200/300?random=ph15"
+  }, 
+  {
+    "titulo": "Teoría Musical para Principiantes",
+    "etiquetas": ["Música"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre notas, escalas y ritmo básico.",
+    "autor": "Diego Ramírez",
+    "foto": "https://picsum.photos/200/300?random=mu1"
+  },
+  {
+    "titulo": "Técnicas de Guitarra Acústica",
+    "etiquetas": ["Música"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para mejorar punteos, acordes y ritmo.",
+    "autor": "Sofía Gómez",
+    "foto": "https://picsum.photos/200/300?random=mu2"
+  },
+  {
+    "titulo": "Producción Musical con DAW",
+    "etiquetas": ["Música"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre mezcla, edición y producción digital.",
+    "autor": "Carlos Mendoza",
+    "foto": "https://picsum.photos/200/300?random=mu3"
+  },
+  {
+    "titulo": "Canto y Técnica Vocal",
+    "etiquetas": ["Música"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre respiración, afinación y ejercicios vocales.",
+    "autor": "Ana Fernández",
+    "foto": "https://picsum.photos/200/300?random=mu4"
+  },
+  {
+    "titulo": "Improvisación en Piano",
+    "etiquetas": ["Música"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo para desarrollar habilidades de improvisación musical.",
+    "autor": "Diego Ramírez",
+    "foto": "https://picsum.photos/200/300?random=mu5"
+  },
+  {
+    "titulo": "Composición Musical Creativa",
+    "etiquetas": ["Música"],
+    "dificultad": "Intermedio",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre estructura, armonía y creación de canciones.",
+    "autor": "Sofía Gómez",
+    "foto": "https://picsum.photos/200/300?random=mu6"
+  },
+  {
+    "titulo": "Manejo de Software de Notación Musical",
+    "etiquetas": ["Música"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo para crear partituras digitales con software popular.",
+    "autor": "Carlos Mendoza",
+    "foto": "https://picsum.photos/200/300?random=mu7"
+  },
+  {
+    "titulo": "Producción de Música Electrónica",
+    "etiquetas": ["Música"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre síntesis, beats y mezcla electrónica.",
+    "autor": "Ana Fernández",
+    "foto": "https://picsum.photos/200/300?random=mu8"
+  },
+  {
+    "titulo": "Teclado para Principiantes",
+    "etiquetas": ["Música"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo para aprender notas, escalas y canciones básicas.",
+    "autor": "Diego Ramírez",
+    "foto": "https://picsum.photos/200/300?random=mu9"
+  },
+  {
+    "titulo": "Grabación y Edición de Audio",
+    "etiquetas": ["Música"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre técnicas de grabación y edición profesional.",
+    "autor": "Carlos Mendoza",
+    "foto": "https://picsum.photos/200/300?random=mu10"
+  },
+  {
+    "titulo": "Historia de la Música Clásica",
+    "etiquetas": ["Música"],
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Contenido completo sobre compositores y estilos de la música clásica.",
+    "autor": "Ana Fernández",
+    "foto": "https://picsum.photos/200/300?random=mu11"
+  },
+  {
+    "titulo": "Armonía y Acordes para Guitarra",
+    "etiquetas": ["Música"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre construcción de acordes y progresiones armónicas.",
+    "autor": "Sofía Gómez",
+    "foto": "https://picsum.photos/200/300?random=mu12"
+  },
+  {
+    "titulo": "Producción de Beats y Ritmos",
+    "etiquetas": ["Música"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo para crear ritmos modernos y beats digitales.",
+    "autor": "Carlos Mendoza",
+    "foto": "https://picsum.photos/200/300?random=mu13"
+  },
+  {
+    "titulo": "Técnicas de Percusión",
+    "etiquetas": ["Música"],
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre ritmos, instrumentos y técnicas de percusión.",
+    "autor": "Diego Ramírez",
+    "foto": "https://picsum.photos/200/300?random=mu14"
+  },
+  {
+    "titulo": "Improvisación y Composición en Jazz",
+    "etiquetas": ["Música"],
+    "dificultad": "Avanzado",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre técnicas avanzadas en jazz y blues.",
+    "autor": "Ana Fernández",
+    "foto": "https://picsum.photos/200/300?random=mu15"
+  },
+  {
+    "titulo": "Introducción a la Escultura en Arcilla",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre técnicas básicas para modelar en arcilla.",
+    "autor": "Elena Martínez",
+    "foto": "https://picsum.photos/200/300?random=sc1"
+  },
+  {
+    "titulo": "Escultura en Madera para Principiantes",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre herramientas y técnicas para tallar madera.",
+    "autor": "Luis García",
+    "foto": "https://picsum.photos/200/300?random=sc2"
+  },
+  {
+    "titulo": "Técnicas Avanzadas de Modelado en Yeso",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo para perfeccionar la escultura en yeso.",
+    "autor": "Elena Martínez",
+    "foto": "https://picsum.photos/200/300?random=sc3"
+  },
+  {
+    "titulo": "Escultura en Metal: Fundición y Soldadura",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre técnicas de fundición y soldadura para esculturas metálicas.",
     "autor": "Carlos Vega",
-    "foto": "https://picsum.photos/200/300?random=13",
-    "etiquetas": ["Programación"]
+    "foto": "https://picsum.photos/200/300?random=sc4"
   },
   {
-    "titulo": "JavaScript desde Cero",
-    "categoria": "Programación",
+    "titulo": "Modelado 3D para Escultura Digital",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre software y técnicas para esculpir en 3D digital.",
+    "autor": "Ana López",
+    "foto": "https://picsum.photos/200/300?random=sc5"
+  },
+  {
+    "titulo": "Escultura con Materiales Reciclados",
+    "etiquetas": ["Escultura"],
     "dificultad": "Principiante",
-    "duracion": "6 horas",
-    "contenido": "Aprende JavaScript y desarrollo frontend moderno.",
-    "autor": "Elena Gómez",
-    "foto": "https://picsum.photos/200/300?random=14",
-    "etiquetas": ["Programación"]
+    "duracion": "5 horas",
+    "contenido": "Contenido completo para crear esculturas usando materiales reciclados y sostenibles.",
+    "autor": "Luis García",
+    "foto": "https://picsum.photos/200/300?random=sc6"
   },
   {
-    "titulo": "Desarrollo Móvil",
-    "categoria": "Programación",
+    "titulo": "Anatomía para Escultores",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre anatomía humana para mejorar tus esculturas figurativas.",
+    "autor": "Elena Martínez",
+    "foto": "https://picsum.photos/200/300?random=sc7"
+  },
+  {
+    "titulo": "Técnicas de Texturizado en Escultura",
+    "etiquetas": ["Escultura"],
     "dificultad": "Intermedio",
     "duracion": "7 horas",
-    "contenido": "Creación de aplicaciones para Android e iOS.",
-    "autor": "Daniel Hernández",
-    "foto": "https://picsum.photos/200/300?random=15",
-    "etiquetas": ["Programación"]
+    "contenido": "Contenido completo para dar acabados realistas y texturas a tus obras.",
+    "autor": "Carlos Vega",
+    "foto": "https://picsum.photos/200/300?random=sc8"
   },
   {
-    "titulo": "DevOps Básico",
-    "categoria": "Programación",
-    "dificultad": "Intermedio",
-    "duracion": "5 horas",
-    "contenido": "Fundamentos de integración y entrega continua.",
-    "autor": "Paula Morales",
-    "foto": "https://picsum.photos/200/300?random=16",
-    "etiquetas": ["Programación"]
-  },
-
-  {
-    "titulo": "Cocina Internacional",
-    "categoria": "Cocina",
+    "titulo": "Escultura Abstracta y Conceptual",
+    "etiquetas": ["Escultura"],
     "dificultad": "Avanzado",
     "duracion": "10 horas",
-    "contenido": "Recetas y técnicas de cocina de varios países.",
-    "autor": "María Gómez",
-    "foto": "https://picsum.photos/200/300?random=17",
-    "etiquetas": ["Cocina"]
+    "contenido": "Contenido completo sobre diseño y creación de esculturas abstractas.",
+    "autor": "Ana López",
+    "foto": "https://picsum.photos/200/300?random=sc9"
   },
   {
-    "titulo": "Cocina Vegana Fácil",
-    "categoria": "Cocina",
-    "dificultad": "Principiante",
-    "duracion": "5 horas",
-    "contenido": "Platos veganos sencillos y nutritivos.",
-    "autor": "Andrés Herrera",
-    "foto": "https://picsum.photos/200/300?random=18",
-    "etiquetas": ["Cocina"]
-  },
-  {
-    "titulo": "Pastelería Creativa",
-    "categoria": "Cocina",
+    "titulo": "Escultura en Piedra: Técnicas Básicas",
+    "etiquetas": ["Escultura"],
     "dificultad": "Intermedio",
-    "duracion": "7 horas",
-    "contenido": "Técnicas y recetas para postres y pasteles.",
-    "autor": "Lucía Ramírez",
-    "foto": "https://picsum.photos/200/300?random=19",
-    "etiquetas": ["Cocina"]
+    "duracion": "11 horas",
+    "contenido": "Contenido completo para aprender a tallar y pulir piedra.",
+    "autor": "Luis García",
+    "foto": "https://picsum.photos/200/300?random=sc10"
   },
   {
-    "titulo": "Gastronomía Molecular",
-    "categoria": "Cocina",
+    "titulo": "Escultura con Resina y Epóxicos",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para trabajar con materiales sintéticos en escultura.",
+    "autor": "Carlos Vega",
+    "foto": "https://picsum.photos/200/300?random=sc11"
+  },
+  {
+    "titulo": "Creación de Esculturas para Espacios Públicos",
+    "etiquetas": ["Escultura"],
     "dificultad": "Avanzado",
-    "duracion": "9 horas",
-    "contenido": "Explora la ciencia detrás de la cocina moderna.",
-    "autor": "José Fernández",
-    "foto": "https://picsum.photos/200/300?random=20",
-    "etiquetas": ["Cocina"]
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre planificación y ejecución de esculturas de gran escala.",
+    "autor": "Ana López",
+    "foto": "https://picsum.photos/200/300?random=sc12"
   },
-
   {
-    "titulo": "Animación 3D Básica",
-    "categoria": "Animación",
+    "titulo": "Modelado en Cera para Esculturas",
+    "etiquetas": ["Escultura"],
     "dificultad": "Principiante",
     "duracion": "6 horas",
-    "contenido": "Introducción a la animación 3D con software popular.",
-    "autor": "Valeria Santos",
-    "foto": "https://picsum.photos/200/300?random=21",
-    "etiquetas": ["Animación"]
+    "contenido": "Contenido completo sobre técnicas para modelar en cera y preparar para fundición.",
+    "autor": "Elena Martínez",
+    "foto": "https://picsum.photos/200/300?random=sc13"
   },
   {
-    "titulo": "Animación para Videojuegos",
-    "categoria": "Animación",
-    "dificultad": "Avanzado",
-    "duracion": "9 horas",
-    "contenido": "Técnicas avanzadas para animar personajes y entornos.",
-    "autor": "Javier Morales",
-    "foto": "https://picsum.photos/200/300?random=22",
-    "etiquetas": ["Animación"]
+    "titulo": "Escultura en Papel Maché",
+    "etiquetas": ["Escultura"],
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Contenido completo para crear figuras y objetos con papel maché.",
+    "autor": "Luis García",
+    "foto": "https://picsum.photos/200/300?random=sc14"
   },
   {
-    "titulo": "Storyboard y Concept Art",
-    "categoria": "Animación",
+    "titulo": "Historia de la Escultura Contemporánea",
+    "etiquetas": ["Escultura"],
     "dificultad": "Intermedio",
     "duracion": "7 horas",
-    "contenido": "Creación de guiones gráficos para animación y cine.",
-    "autor": "Natalia Vargas",
-    "foto": "https://picsum.photos/200/300?random=23",
-    "etiquetas": ["Animación"]
+    "contenido": "Contenido completo sobre movimientos, artistas y técnicas modernas.",
+    "autor": "Ana López",
+    "foto": "https://picsum.photos/200/300?random=sc15"
+  }, 
+  {
+    "titulo": "Cocina Básica para Principiantes",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre técnicas básicas y recetas fáciles.",
+    "autor": "María Torres",
+    "foto": "https://picsum.photos/200/300?random=co1"
   },
   {
-    "titulo": "Animación Tradicional",
-    "categoria": "Animación",
+    "titulo": "Cocina Internacional: Sabores del Mundo",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo con recetas y técnicas de diferentes países.",
+    "autor": "Juan Pérez",
+    "foto": "https://picsum.photos/200/300?random=co2"
+  },
+  {
+    "titulo": "Repostería y Postres Caseros",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo para preparar deliciosos postres y repostería.",
+    "autor": "María Torres",
+    "foto": "https://picsum.photos/200/300?random=co3"
+  },
+  {
+    "titulo": "Cocina Vegana para Todos los Días",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo con recetas veganas saludables y sencillas.",
+    "autor": "Carlos Ramírez",
+    "foto": "https://picsum.photos/200/300?random=co4"
+  },
+  {
+    "titulo": "Técnicas de Cocina Profesional",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo sobre técnicas avanzadas y manejo de ingredientes.",
+    "autor": "Juan Pérez",
+    "foto": "https://picsum.photos/200/300?random=co5"
+  },
+  {
+    "titulo": "Cocina Mediterránea Saludable",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo con recetas tradicionales y saludables mediterráneas.",
+    "autor": "María Torres",
+    "foto": "https://picsum.photos/200/300?random=co6"
+  },
+  {
+    "titulo": "Cocina para Niños y Familias",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Contenido completo con recetas fáciles y nutritivas para niños.",
+    "autor": "Carlos Ramírez",
+    "foto": "https://picsum.photos/200/300?random=co7"
+  },
+  {
+    "titulo": "Panadería Casera",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo para preparar diferentes tipos de pan en casa.",
+    "autor": "Juan Pérez",
+    "foto": "https://picsum.photos/200/300?random=co8"
+  },
+  {
+    "titulo": "Cocina Asiática: Técnicas y Sabores",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Intermedio",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre la variedad culinaria asiática y técnicas típicas.",
+    "autor": "María Torres",
+    "foto": "https://picsum.photos/200/300?random=co9"
+  },
+  {
+    "titulo": "Salsas y Aderezos Caseros",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo para preparar salsas deliciosas y variadas.",
+    "autor": "Carlos Ramírez",
+    "foto": "https://picsum.photos/200/300?random=co10"
+  },
+  {
+    "titulo": "Cocina para Dietas Especiales",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo con recetas adaptadas para diferentes necesidades dietéticas.",
+    "autor": "Juan Pérez",
+    "foto": "https://picsum.photos/200/300?random=co11"
+  },
+  {
+    "titulo": "Técnicas de Corte y Preparación",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre cortes, utensilios y preparación de ingredientes.",
+    "autor": "María Torres",
+    "foto": "https://picsum.photos/200/300?random=co12"
+  },
+  {
+    "titulo": "Cocina Mexicana Tradicional",
+    "etiquetas": ["Cocina"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo con recetas y técnicas de la cocina mexicana auténtica.",
+    "autor": "Carlos Ramírez",
+    "foto": "https://picsum.photos/200/300?random=co13"
+  },
+  {
+    "titulo": "Maridaje de Vinos y Comida",
+    "etiquetas": ["Cocina"],
     "dificultad": "Avanzado",
     "duracion": "8 horas",
-    "contenido": "Técnicas clásicas de animación 2D.",
-    "autor": "Roberto Díaz",
-    "foto": "https://picsum.photos/200/300?random=24",
-    "etiquetas": ["Animación"]
+    "contenido": "Contenido completo sobre cómo combinar vinos y platos para una experiencia completa.",
+    "autor": "Juan Pérez",
+    "foto": "https://picsum.photos/200/300?random=co14"
   },
-
   {
-    "titulo": "Salud Integral y Bienestar",
-    "categoria": "Salud",
+    "titulo": "Técnicas de Conservación de Alimentos",
+    "etiquetas": ["Cocina"],
     "dificultad": "Intermedio",
     "duracion": "7 horas",
-    "contenido": "Consejos y prácticas para una vida saludable.",
-    "autor": "Diana Pérez",
-    "foto": "https://picsum.photos/200/300?random=25",
-    "etiquetas": ["Salud"]
+    "contenido": "Contenido completo para conservar alimentos de forma segura y saludable.",
+    "autor": "María Torres",
+    "foto": "https://picsum.photos/200/300?random=co15"
   },
   {
-    "titulo": "Mindfulness para Principiantes",
-    "categoria": "Salud",
+    "titulo": "Introducción al Diseño de Moda",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre los fundamentos del diseño de moda.",
+    "autor": "Sofía Martínez",
+    "foto": "https://picsum.photos/200/300?random=mo1"
+  },
+  {
+    "titulo": "Tendencias de Moda para Temporada Primavera-Verano",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre las últimas tendencias y cómo aplicarlas.",
+    "autor": "Daniela Gómez",
+    "foto": "https://picsum.photos/200/300?random=mo2"
+  },
+  {
+    "titulo": "Taller de Estilismo Personal",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Contenido completo para crear un estilo propio y potenciar la imagen personal.",
+    "autor": "Sofía Martínez",
+    "foto": "https://picsum.photos/200/300?random=mo3"
+  },
+  {
+    "titulo": "Patronaje y Confección Básica",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre creación de patrones y confección de prendas.",
+    "autor": "Marcos Díaz",
+    "foto": "https://picsum.photos/200/300?random=mo4"
+  },
+  {
+    "titulo": "Diseño de Accesorios de Moda",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para diseñar y crear accesorios modernos.",
+    "autor": "Daniela Gómez",
+    "foto": "https://picsum.photos/200/300?random=mo5"
+  },
+  {
+    "titulo": "Historia de la Moda Contemporánea",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre evolución y estilos de la moda moderna.",
+    "autor": "Sofía Martínez",
+    "foto": "https://picsum.photos/200/300?random=mo6"
+  },
+  {
+    "titulo": "Taller de Maquillaje y Belleza",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo para técnicas básicas de maquillaje y cuidado personal.",
+    "autor": "Marcos Díaz",
+    "foto": "https://picsum.photos/200/300?random=mo7"
+  },
+  {
+    "titulo": "Diseño de Moda Sostenible",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo sobre prácticas sostenibles en la industria de la moda.",
+    "autor": "Daniela Gómez",
+    "foto": "https://picsum.photos/200/300?random=mo8"
+  },
+  {
+    "titulo": "Fotografía de Moda Profesional",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Avanzado",
+    "duracion": "11 horas",
+    "contenido": "Contenido completo sobre técnicas de fotografía para moda y publicidad.",
+    "autor": "Sofía Martínez",
+    "foto": "https://picsum.photos/200/300?random=mo9"
+  },
+  {
+    "titulo": "Ilustración de Moda Digital",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para crear ilustraciones de moda usando herramientas digitales.",
+    "autor": "Marcos Díaz",
+    "foto": "https://picsum.photos/200/300?random=mo10"
+  },
+  {
+    "titulo": "Taller de Costura Avanzada",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Avanzado",
+    "duracion": "12 horas",
+    "contenido": "Contenido completo para perfeccionar técnicas de costura y acabados.",
+    "autor": "Daniela Gómez",
+    "foto": "https://picsum.photos/200/300?random=mo11"
+  },
+  {
+    "titulo": "Moda y Estilo para Eventos Especiales",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo para crear looks adecuados para diferentes eventos.",
+    "autor": "Sofía Martínez",
+    "foto": "https://picsum.photos/200/300?random=mo12"
+  },
+  {
+    "titulo": "Diseño Textil y Estampado",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre diseño y creación de estampados textiles.",
+    "autor": "Marcos Díaz",
+    "foto": "https://picsum.photos/200/300?random=mo13"
+  },
+  {
+    "titulo": "Tendencias en Calzado y Complementos",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Intermedio",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo sobre diseño y tendencias en calzado y accesorios.",
+    "autor": "Daniela Gómez",
+    "foto": "https://picsum.photos/200/300?random=mo14"
+  },
+  {
+    "titulo": "Marketing de Moda y Branding Personal",
+    "etiquetas": ["Moda y Estilo"],
+    "dificultad": "Avanzado",
+    "duracion": "10 horas",
+    "contenido": "Contenido completo para desarrollar marca personal y estrategias de marketing.",
+    "autor": "Sofía Martínez",
+    "foto": "https://picsum.photos/200/300?random=mo15"
+  },
+  {
+    "titulo": "Introducción al Mindfulness",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Contenido completo sobre técnicas básicas de mindfulness para reducir estrés.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs1"
+  },
+  {
+    "titulo": "Yoga para Principiantes",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Principiante",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo con posturas y prácticas de yoga para principiantes.",
+    "autor": "Carlos Fernández",
+    "foto": "https://picsum.photos/200/300?random=bs2"
+  },
+  {
+    "titulo": "Alimentación Saludable y Nutrición",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Intermedio",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo sobre dietas equilibradas y hábitos alimenticios saludables.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs3"
+  },
+  {
+    "titulo": "Meditación Guiada para el Estrés",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Principiante",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo con ejercicios de meditación para controlar el estrés diario.",
+    "autor": "Carlos Fernández",
+    "foto": "https://picsum.photos/200/300?random=bs4"
+  },
+  {
+    "titulo": "Ejercicios de Respiración para la Salud",
+    "etiquetas": ["Bienestar y Salud"],
     "dificultad": "Principiante",
     "duracion": "4 horas",
-    "contenido": "Aprende técnicas básicas de mindfulness y meditación.",
-    "autor": "Miguel Rodríguez",
-    "foto": "https://picsum.photos/200/300?random=26",
-    "etiquetas": ["Salud"]
+    "contenido": "Contenido completo sobre técnicas de respiración para mejorar bienestar físico y mental.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs5"
   },
   {
-    "titulo": "Terapias Naturales",
-    "categoria": "Salud",
-    "dificultad": "Avanzado",
+    "titulo": "Fitness Funcional para Todos",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Intermedio",
     "duracion": "9 horas",
-    "contenido": "Explora técnicas y terapias alternativas para la salud.",
-    "autor": "Laura Sánchez",
-    "foto": "https://picsum.photos/200/300?random=27",
-    "etiquetas": ["Salud"]
+    "contenido": "Contenido completo con rutinas de ejercicio para mejorar fuerza y movilidad.",
+    "autor": "Carlos Fernández",
+    "foto": "https://picsum.photos/200/300?random=bs6"
   },
   {
-    "titulo": "Medicina Alternativa",
-    "categoria": "Salud",
+    "titulo": "Técnicas de Relajación y Sueño",
+    "etiquetas": ["Bienestar y Salud"],
     "dificultad": "Intermedio",
     "duracion": "6 horas",
-    "contenido": "Introducción a prácticas de medicina alternativa.",
-    "autor": "Fernando Castro",
-    "foto": "https://picsum.photos/200/300?random=28",
-    "etiquetas": ["Salud"]
-  },
-
-  {
-    "titulo": "Nutrición Deportiva",
-    "categoria": "Nutrición",
-    "dificultad": "Intermedio",
-    "duracion": "8 horas",
-    "contenido": "Alimentación para optimizar el rendimiento físico.",
-    "autor": "Natalia Ruiz",
-    "foto": "https://picsum.photos/200/300?random=29",
-    "etiquetas": ["Nutrición"]
+    "contenido": "Contenido completo para mejorar la calidad del sueño y técnicas de relajación.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs7"
   },
   {
-    "titulo": "Dietoterapia Clínica",
-    "categoria": "Nutrición",
-    "dificultad": "Avanzado",
-    "duracion": "9 horas",
-    "contenido": "Tratamiento nutricional para enfermedades crónicas.",
-    "autor": "Fernando López",
-    "foto": "https://picsum.photos/200/300?random=30",
-    "etiquetas": ["Nutrición"]
-  },
-  {
-    "titulo": "Nutrición Infantil",
-    "categoria": "Nutrición",
-    "dificultad": "Principiante",
-    "duracion": "5 horas",
-    "contenido": "Alimentación saludable para niños.",
-    "autor": "Andrea Morales",
-    "foto": "https://picsum.photos/200/300?random=31",
-    "etiquetas": ["Nutrición"]
-  },
-  {
-    "titulo": "Salud Pública y Nutrición",
-    "categoria": "Nutrición",
+    "titulo": "Entrenamiento de Alta Intensidad (HIIT)",
+    "etiquetas": ["Bienestar y Salud"],
     "dificultad": "Avanzado",
     "duracion": "10 horas",
-    "contenido": "Políticas y estrategias para la nutrición pública.",
-    "autor": "Ricardo Herrera",
-    "foto": "https://picsum.photos/200/300?random=32",
-    "etiquetas": ["Nutrición"]
+    "contenido": "Contenido completo con ejercicios de alta intensidad para quemar grasa y mejorar resistencia.",
+    "autor": "Carlos Fernández",
+    "foto": "https://picsum.photos/200/300?random=bs8"
+  },
+  {
+    "titulo": "Alivio del Dolor con Terapias Naturales",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo sobre terapias naturales para el alivio del dolor crónico.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs9"
+  },
+  {
+    "titulo": "Nutrición Deportiva para Atletas",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Avanzado",
+    "duracion": "8 horas",
+    "contenido": "Contenido completo para optimizar el rendimiento mediante una dieta adecuada.",
+    "autor": "Carlos Fernández",
+    "foto": "https://picsum.photos/200/300?random=bs10"
+  },
+  {
+    "titulo": "Gestión Emocional y Autoestima",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Intermedio",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo para mejorar la inteligencia emocional y la autoestima.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs11"
+  },
+  {
+    "titulo": "Terapias Complementarias en Salud",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Avanzado",
+    "duracion": "9 horas",
+    "contenido": "Contenido completo sobre terapias alternativas y complementarias para la salud integral.",
+    "autor": "Carlos Fernández",
+    "foto": "https://picsum.photos/200/300?random=bs12"
+  },
+  {
+    "titulo": "Pilates para el Equilibrio y la Fuerza",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Intermedio",
+    "duracion": "7 horas",
+    "contenido": "Contenido completo con ejercicios de pilates para mejorar postura y fuerza.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs13"
+  },
+  {
+    "titulo": "Cuidado Personal y Bienestar Diario",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Principiante",
+    "duracion": "5 horas",
+    "contenido": "Contenido completo con hábitos diarios para mejorar la salud y el bienestar.",
+    "autor": "Carlos Fernández",
+    "foto": "https://picsum.photos/200/300?random=bs14"
+  },
+  {
+    "titulo": "Automasaje y Técnicas de Relajación",
+    "etiquetas": ["Bienestar y Salud"],
+    "dificultad": "Intermedio",
+    "duracion": "6 horas",
+    "contenido": "Contenido completo para aprender técnicas de automasaje para aliviar tensiones.",
+    "autor": "Laura Méndez",
+    "foto": "https://picsum.photos/200/300?random=bs15"
   }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+{
+  "categorias": [
+    "Diseño Gráfico",
+    "Animación",
+    "Programación",
+    "Ilustración",
+    "Escritura Creativa",
+    "Dibujo",
+    "Fotografía",
+    "Música",
+    "Escultura",
+    "Cocina",
+    "Moda y Estilo",
+    "Bienestar y Salud"
+  ],
+  "relaciones": [
+    {"desde": "Diseño Gráfico", "hacia": "Animación", "peso": 1.0},
+    {"desde": "Diseño Gráfico", "hacia": "Ilustración", "peso": 1.2},
+    {"desde": "Diseño Gráfico", "hacia": "Programación", "peso": 2.0},
+    
+    {"desde": "Animación", "hacia": "Ilustración", "peso": 1.1},
+    {"desde": "Animación", "hacia": "Programación", "peso": 1.5},
+    
+    {"desde": "Ilustración", "hacia": "Dibujo", "peso": 1.0},
+    {"desde": "Ilustración", "hacia": "Escritura Creativa", "peso": 2.2},
+    
+    {"desde": "Dibujo", "hacia": "Escultura", "peso": 1.8},
+    {"desde": "Dibujo", "hacia": "Fotografía", "peso": 2.5},
+    
+    {"desde": "Programación", "hacia": "Música", "peso": 2.7},
+    {"desde": "Programación", "hacia": "Escritura Creativa", "peso": 2.3},
+    
+    {"desde": "Escritura Creativa", "hacia": "Música", "peso": 2.0},
+    {"desde": "Escritura Creativa", "hacia": "Moda y Estilo", "peso": 2.6},
+    
+    {"desde": "Moda y Estilo", "hacia": "Bienestar y Salud", "peso": 1.5},
+    {"desde": "Moda y Estilo", "hacia": "Fotografía", "peso": 1.7},
+    
+    {"desde": "Cocina", "hacia": "Bienestar y Salud", "peso": 1.2},
+    {"desde": "Cocina", "hacia": "Moda y Estilo", "peso": 2.3},
+    
+    {"desde": "Escultura", "hacia": "Dibujo", "peso": 1.8},
+    {"desde": "Escultura", "hacia": "Ilustración", "peso": 2.4}
+  ]
+}
