@@ -1,46 +1,341 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Curso</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso - Creare</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Inter:wght@400;600;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-    <div class="container_curso">
-        <div class="header">
-            <div class="logo_header">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo creare" class="logo-modern">
+                <h1 class="brand-name">Creare</h1>
             </div>
-            <h1 class="creare_header">creare</h1>
+            <nav class="nav-menu">
+                <a href="{{ url_for('feed_page') }}" class="nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Volver al Feed
+                </a>
+            </nav>
         </div>
-        <div class="content_curso">
-            <div class="curso_f1">
-                <img id="fotoCurso" alt="Imagen del curso" width="100%" height="100%" />
-                <h1 id="tituloCurso"></h1>
+    </header>
+
+    <!-- Course Hero Section -->
+    <section class="course-hero">
+        <div class="course-hero-bg">
+            <img id="fotoCurso" alt="Imagen del curso" class="course-hero-image" />
+            <div class="course-hero-overlay"></div>
+        </div>
+        <div class="course-hero-content">
+            <div class="container-modern">
+                <div class="course-hero-info">
+                    <h1 id="tituloCurso" class="course-title"></h1>
+                    <div class="course-meta">
+                        <span class="course-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span id="categoria"></span>
+                        </span>
+                        <span class="course-meta-item">
+                            <i class="fas fa-signal"></i>
+                            <span id="dificultad"></span>
+                        </span>
+                        <span class="course-meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="duracion"></span>
+                        </span>
+                    </div>
+                </div>
             </div>
-
-            <p><strong>Categoría:</strong> <span id="categoria"></span></p>
-            <p><strong>Dificultad:</strong> <span id="dificultad"></span></p>
-            <p><strong>Duración:</strong> <span id="duracion"></span></p>
-            <p><strong>Contenido:</strong> <span id="contenido"></span></p>
-
-            <h2>Autor</h2>
-            <p id="autorNombre"></p>
-            <p id="autorBio"></p>
-            <img id="autorFoto" alt="Foto del autor" width="100%" />
-
-            <button id="btnInscribir">Inscribirme</button>
-            
-            <a href="{{ url_for('feed_page') }}">← Volver a recomendaciones</a>
         </div>
+    </section>
 
+    <!-- Course Content -->
+    <main class="course-main">
+        <div class="container-modern">
+            <div class="course-layout">
+                <!-- Course Info -->
+                <div class="course-info">
+                    <div class="course-card">
+                        <h2 class="course-section-title">
+                            <i class="fas fa-info-circle"></i>
+                            Descripción del Curso
+                        </h2>
+                        <div class="course-description">
+                            <p id="contenido"></p>
+                        </div>
+                    </div>
 
-        
-    </div>
-    <p id="mensaje"></p>
+                    <!-- Author Info -->
+                    <div class="course-card">
+                        <h2 class="course-section-title">
+                            <i class="fas fa-user-graduate"></i>
+                            Instructor
+                        </h2>
+                        <div class="author-info">
+                            <div class="author-avatar">
+                                <img id="autorFoto" alt="Foto del autor" class="author-image" />
+                            </div>
+                            <div class="author-details">
+                                <h3 id="autorNombre" class="author-name"></h3>
+                                <p id="autorBio" class="author-bio"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Sidebar -->
+                <div class="course-sidebar">
+                    <div class="course-card sticky">
+                        <div class="enrollment-section">
+                            <button id="btnInscribir" class="enrollment-btn">
+                                <i class="fas fa-play"></i>
+                                Inscribirme al Curso
+                            </button>
+                            <div class="course-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certificado incluido</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Acceso móvil</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-infinity"></i>
+                                    <span>Acceso de por vida</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Comunidad de estudiantes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Message Container -->
+    <div id="mensaje" class="message-container"></div>
+
     <script src="{{ url_for('static', filename='js/curso.js') }}"></script>
-</body>
 
+    <style>
+        /* Estilos específicos para la página del curso */
+        .course-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .course-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .course-hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 1, 47, 0.8) 0%, rgba(113, 91, 215, 0.6) 100%);
+        }
+
+        .course-hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 3rem 0;
+            z-index: 2;
+        }
+
+        .course-hero-info {
+            color: white;
+        }
+
+        .course-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .course-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            font-weight: 600;
+        }
+
+        .course-main {
+            padding: 4rem 0;
+        }
+
+        .course-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .course-card {
+            background: rgba(113, 91, 215, 0.1);
+            border: 1px solid rgba(113, 91, 215, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .course-section-title {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .course-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .author-info {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .author-avatar {
+            flex-shrink: 0;
+        }
+
+        .author-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .author-name {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-bio {
+            color: rgba(249, 237, 224, 0.8);
+            line-height: 1.6;
+        }
+
+        .course-sidebar .course-card.sticky {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .enrollment-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            border: none;
+            padding: 1.25rem 2rem;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .enrollment-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .course-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-light);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(113, 91, 215, 0.2);
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-item i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .course-title {
+                font-size: 2rem;
+            }
+
+            .course-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .course-meta {
+                gap: 1rem;
+            }
+
+            .course-meta-item {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .author-info {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</body>
 </html>

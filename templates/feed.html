@@ -1,24 +1,465 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <title>Feed</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creare - Cursos Recomendados</title>
+    <link rel="stylesheet" href="../static/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Inter:wght@400;600;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class ="container">
-        
-        <h1 class="hola">Bienvenido, {{ usuario }}</h1>
+    <!-- Header mejorado -->
+    <header class="header-modern">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../static/images/logo.png" alt="logo creare" class="logo-modern">
+                <h1 class="brand-name">Creare</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    Inicio
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    Mi Perfil
+                </a>
+                <a href="/logout" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </div>
+    </header>
 
-        <h2>Cursos recomendados:</h2>
-        <div id="cursos"></div>
-        <p id="mensaje"></p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Descubre tu próximo curso</h1>
+            <p class="hero-subtitle">Recomendaciones personalizadas basadas en tus intereses</p>
+        </div>
+    </section>
 
-        <form action="/logout" method="get">
-            <button type="submit">Cerrar sesión</button>
-        </form>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-modern">
+            <!-- Filtros mejorados -->
+            <div class="filters-section">
+                <div class="filters-header">
+                    <h2><i class="fas fa-filter"></i> Filtros</h2>
+                </div>
+                <div class="filters-content">
+                    <div class="filter-group">
+                        <label for="categoria" class="filter-label">
+                            <i class="fas fa-tags"></i>
+                            Categoría
+                        </label>
+                        <select id="categoria" class="filter-select">
+                            <option value="">Todas las categorías</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="orden" class="filter-label">
+                            <i class="fas fa-sort"></i>
+                            Ordenar por
+                        </label>
+                        <select id="orden" class="filter-select">
+                            <option value="compatibilidad">Compatibilidad</option>
+                            <option value="popularidad">Popularidad</option>
+                        </select>
+                    </div>
+                    <button class="filter-btn" onclick="cargarCursos()">
+                        <i class="fas fa-search"></i>
+                        Aplicar Filtros
+                    </button>
+                </div>
+            </div>
 
-        <script src="{{ url_for('static', filename='js/feed.js') }}"></script>
-    </div>
+            <div id="mensaje" class="message-container"></div>
+
+            <!-- Mis Cursos -->
+            <section class="courses-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-bookmark"></i>
+                        Mis Cursos
+                    </h2>
+                </div>
+                <div id="mis-cursos" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 2rem;"></div>
+            </section>
+
+            <!-- Cursos Recomendados -->
+            <section class="courses-section featured">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-star"></i>
+                        Recomendados para ti
+                    </h2>
+                    <span class="section-count" id="recomendados-count">0 cursos</span>
+                </div>
+                <div id="recomendados" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 2rem;"></div>
+            </section>
+
+            <!-- Usuarios Similares -->
+            <section class="courses-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-users"></i>
+                        Usuarios con gustos similares
+                    </h2>
+                </div>
+                <div id="usuarios-similares" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 2rem;"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="footer-content">
+            <p>&copy; 2024 Creare. Aprendizaje sin límites.</p>
+        </div>
+    </footer>
+
+    <!-- CARGAR EL SCRIPT ORIGINAL PRIMERO -->
+    <script src="../static/js/feed.js"></script>
+    
+    <!-- NUESTRO SCRIPT PERSONALIZADO QUE SOBRESCRIBE LAS FUNCIONES -->
+    <script>
+        // ESPERAR A QUE EL SCRIPT ORIGINAL SE CARGUE COMPLETAMENTE
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // FUNCIÓN MEJORADA PARA CREAR CARDS DE CURSOS
+            function createEnhancedCourseCard(curso) {
+                const card = document.createElement('div');
+                card.className = 'course-card-enhanced';
+                card.style.cssText = `
+                    background: linear-gradient(135deg, #F9EDE0 0%, #f0e6d6 100%);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    cursor: pointer;
+                    position: relative;
+                    height: 100%;
+                    max-height: 600px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 400px;
+                    margin: 0 auto;
+                `;
+                
+                // Efecto hover
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                });
+
+                // Click para ir al curso
+                card.addEventListener('click', function() {
+                    window.location.href = `/curso/${curso.id}`;
+                });
+
+                // Crear contenido de la card
+                const rating = curso.rating || (Math.random() * 2 + 3).toFixed(1);
+                const students = curso.estudiantes || Math.floor(Math.random() * 1000) + 100;
+                const duration = curso.duracion || `${Math.floor(Math.random() * 8) + 2} horas`;
+                
+                card.innerHTML = `
+                    <!-- Barra superior de color -->
+                    <div style="height: 4px; background: linear-gradient(90deg, #715BD7, #FF4848); flex-shrink: 0;"></div>
+                    
+                    <!-- Imagen del curso -->
+                    <div style="position: relative; height: 180px; max-height: 180px; overflow: hidden; flex-shrink: 0;">
+                        <img src="${curso.imagen || '/placeholder.svg?height=180&width=320'}" 
+                             alt="${curso.titulo}" 
+                             style="width: 100%; height: 100%; max-height: 180px; object-fit: cover; object-position: center; transition: transform 0.3s ease; display: block;"
+                             onmouseover="this.style.transform='scale(1.05)'"
+                             onmouseout="this.style.transform='scale(1)'"
+                             onerror="this.src='/placeholder.svg?height=180&width=320'">
+                        
+                        <!-- Badge de dificultad -->
+                        <div style="position: absolute; top: 0.75rem; left: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: white; background: ${getDifficultyColor(curso.dificultad)}; z-index: 2;">
+                            ${curso.dificultad || 'Intermedio'}
+                        </div>
+                        
+                        <!-- Botón de bookmark -->
+                        <button onclick="event.stopPropagation(); toggleBookmark(${curso.id})" 
+                                style="position: absolute; top: 0.75rem; right: 0.75rem; background: rgba(255,255,255,0.9); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; z-index: 2; font-size: 0.8rem;"
+                                onmouseover="this.style.background='#715BD7'; this.style.color='white'"
+                                onmouseout="this.style.background='rgba(255,255,255,0.9)'; this.style.color='#666'">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Contenido de la card -->
+                    <div style="padding: 1.25rem; flex: 1; display: flex; flex-direction: column; min-height: 0;">
+                        <!-- Categoría -->
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; color: #715BD7; font-size: 0.85rem; font-weight: 600;">
+                            <i class="fas fa-tag" style="font-size: 0.8rem;"></i>
+                            <span>${curso.categoria || 'General'}</span>
+                        </div>
+                        
+                        <!-- Título -->
+                        <h3 style="font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1A012F; margin-bottom: 0.75rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6rem;">
+                            ${curso.titulo}
+                        </h3>
+                        
+                        <!-- Descripción -->
+                        <p style="color: #666; font-size: 0.9rem; line-height: 1.4; margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; flex: 1; min-height: 2.8rem;">
+                            ${curso.contenido || 'Descripción del curso no disponible.'}
+                        </p>
+                        
+                        <!-- Instructor -->
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding: 0.75rem; background: rgba(113, 91, 215, 0.05); border-radius: 8px;">
+                            <img src="${curso.autor_foto || '/placeholder.svg?height=36&width=36'}" 
+                                 alt="${curso.autor}" 
+                                 style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #715BD7; flex-shrink: 0;"
+                                 onerror="this.src='/placeholder.svg?height=36&width=36'">
+                            <div style="min-width: 0; flex: 1;">
+                                <div style="font-weight: 600; color: #1A012F; font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${curso.autor || 'Instructor'}</div>
+                                <div style="font-size: 0.75rem; color: #666;">Instructor</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Estadísticas -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding: 0.75rem 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; flex-shrink: 0;">
+                            <div style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.8rem; color: #666;">
+                                <i class="fas fa-clock" style="font-size: 0.75rem;"></i>
+                                <span>${duration}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.8rem; color: #666;">
+                                <i class="fas fa-users" style="font-size: 0.75rem;"></i>
+                                <span>${students > 999 ? (students/1000).toFixed(1) + 'k' : students}</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+                                <div style="display: flex; gap: 0.1rem;">
+                                    ${generateStars(rating)}
+                                </div>
+                                <span style="font-weight: 600; color: #1A012F; font-size: 0.75rem;">${rating}</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Footer con precio y botón -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; flex-shrink: 0;">
+                            <div>
+                                ${curso.precio ? 
+                                    `<span style="font-size: 1.1rem; font-weight: 700; color: #715BD7;">$${curso.precio}</span>` :
+                                    `<span style="background: #28a745; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600;">Gratis</span>`
+                                }
+                            </div>
+                            <button onclick="event.stopPropagation(); enrollCourse(${curso.id})" 
+                                    style="background: #715BD7; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem;"
+                                    onmouseover="this.style.background='#5d4bc4'; this.style.transform='translateY(-2px)'"
+                                    onmouseout="this.style.background='#715BD7'; this.style.transform='translateY(0)'">
+                                <i class="fas fa-play" style="font-size: 0.8rem;"></i>
+                                Inscribirme
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                return card;
+            }
+
+            // FUNCIÓN PARA CREAR CARDS DE USUARIOS
+            function createEnhancedUserCard(usuario) {
+                const card = document.createElement('div');
+                card.className = 'user-card-enhanced';
+                card.style.cssText = `
+                    background: white;
+                    border-radius: 12px;
+                    padding: 1.5rem;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    border: 1px solid #eee;
+                    cursor: pointer;
+                    height: 100%;
+                    max-height: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 320px;
+                    margin: 0 auto;
+                `;
+                
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px)';
+                    this.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                });
+
+                const coursesCompleted = usuario.cursos_completados || Math.floor(Math.random() * 20) + 1;
+                const followers = usuario.seguidores || Math.floor(Math.random() * 500) + 50;
+                const isOnline = Math.random() > 0.7;
+                
+                card.innerHTML = `
+                    <!-- Header con avatar y botón seguir -->
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <div style="position: relative;">
+                            <img src="${usuario.foto || '/placeholder.svg?height=60&width=60'}" 
+                                 alt="${usuario.nombre}" 
+                                 style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid #715BD7;"
+                                 onerror="this.src='/placeholder.svg?height=60&width=60'">
+                            <div style="position: absolute; bottom: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; background: ${isOnline ? '#28a745' : '#ccc'};"></div>
+                        </div>
+                        <button onclick="toggleFollow('${usuario.id}')" 
+                                style="background: #715BD7; color: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center;"
+                                onmouseover="this.style.background='#5d4bc4'; this.style.transform='scale(1.1)'"
+                                onmouseout="this.style.background='#715BD7'; this.style.transform='scale(1)'">
+                            <i class="fas fa-user-plus"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Información del usuario -->
+                    <div style="text-align: center; margin-bottom: 1rem; flex: 1;">
+                        <h4 style="font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1A012F; margin-bottom: 0.25rem;">
+                            ${usuario.nombre}
+                        </h4>
+                        <p style="color: #715BD7; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            ${usuario.titulo || 'Estudiante'}
+                        </p>
+                        <p style="color: #666; font-size: 0.85rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            ${usuario.bio || 'Apasionado por el aprendizaje continuo y el desarrollo personal.'}
+                        </p>
+                    </div>
+                    
+                    <!-- Estadísticas -->
+                    <div style="display: flex; justify-content: space-around; margin-bottom: 1rem; padding: 1rem 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+                        <div style="text-align: center;">
+                            <span style="display: block; font-size: 1.25rem; font-weight: 700; color: #715BD7; font-family: 'Inter', sans-serif;">
+                                ${coursesCompleted}
+                            </span>
+                            <span style="font-size: 0.8rem; color: #666;">Cursos</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="display: block; font-size: 1.25rem; font-weight: 700; color: #715BD7; font-family: 'Inter', sans-serif;">
+                                ${followers > 999 ? (followers/1000).toFixed(1) + 'k' : followers}
+                            </span>
+                            <span style="font-size: 0.8rem; color: #666;">Seguidores</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Intereses -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;">
+                        ${(usuario.intereses || ['Programación', 'Diseño']).slice(0, 2).map(interes => 
+                            `<span style="background: rgba(113, 91, 215, 0.1); color: #715BD7; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">${interes}</span>`
+                        ).join('')}
+                    </div>
+                    
+                    <!-- Acciones -->
+                    <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+                        <button onclick="viewProfile('${usuario.id}')" 
+                                style="flex: 1; background: transparent; color: #715BD7; border: 2px solid #715BD7; padding: 0.5rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 0.25rem;"
+                                onmouseover="this.style.background='#715BD7'; this.style.color='white'"
+                                onmouseout="this.style.background='transparent'; this.style.color='#715BD7'">
+                            <i class="fas fa-eye"></i>
+                            Ver perfil
+                        </button>
+                        <button onclick="sendMessage('${usuario.id}')" 
+                                style="flex: 1; background: #715BD7; color: white; border: none; padding: 0.5rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 0.25rem;"
+                                onmouseover="this.style.background='#5d4bc4'; this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.background='#715BD7'; this.style.transform='translateY(0)'">
+                            <i class="fas fa-comment"></i>
+                            Mensaje
+                        </button>
+                    </div>
+                `;
+                
+                return card;
+            }
+
+            // FUNCIONES AUXILIARES
+            function getDifficultyColor(difficulty) {
+                switch(difficulty?.toLowerCase()) {
+                    case 'principiante': return '#28a745';
+                    case 'intermedio': return '#ffc107';
+                    case 'avanzado': return '#dc3545';
+                    default: return '#ffc107';
+                }
+            }
+
+            function generateStars(rating) {
+                const fullStars = Math.floor(rating);
+                const hasHalfStar = rating % 1 !== 0;
+                const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+                
+                let starsHTML = '';
+                for (let i = 0; i < fullStars; i++) {
+                    starsHTML += '<i class="fas fa-star" style="color: #FFD700; font-size: 0.7rem;"></i>';
+                }
+                if (hasHalfStar) {
+                    starsHTML += '<i class="fas fa-star-half-alt" style="color: #FFD700; font-size: 0.7rem;"></i>';
+                }
+                for (let i = 0; i < emptyStars; i++) {
+                    starsHTML += '<i class="far fa-star" style="color: #FFD700; font-size: 0.7rem;"></i>';
+                }
+                return starsHTML;
+            }
+
+            // FUNCIONES DE INTERACCIÓN
+            window.toggleBookmark = function(courseId) {
+                console.log('Toggling bookmark for course:', courseId);
+            };
+
+            window.enrollCourse = function(courseId) {
+                window.location.href = `/curso/${courseId}`;
+            };
+
+            window.toggleFollow = function(userId) {
+                console.log('Toggling follow for user:', userId);
+            };
+
+            window.viewProfile = function(userId) {
+                window.location.href = `/perfil/${userId}`;
+            };
+
+            window.sendMessage = function(userId) {
+                console.log('Sending message to user:', userId);
+            };
+
+            // FUNCIÓN PARA ACTUALIZAR CONTADORES
+            function updateCounts() {
+                const misCursos = document.querySelectorAll('#mis-cursos .course-card-enhanced, #mis-cursos .user-card-enhanced').length;
+                const recomendados = document.querySelectorAll('#recomendados .course-card-enhanced, #recomendados .user-card-enhanced').length;
+                const usuariosSimilares = document.querySelectorAll('#usuarios-similares .course-card-enhanced, #usuarios-similares .user-card-enhanced').length;
+
+                document.getElementById('mis-cursos-count').textContent = `${misCursos} curso${misCursos !== 1 ? 's' : ''}`;
+                document.getElementById('recomendados-count').textContent = `${recomendados} curso${recomendados !== 1 ? 's' : ''}`;
+                document.getElementById('usuarios-similares-count').textContent = `${usuariosSimilares} usuario${usuariosSimilares !== 1 ? 's' : ''}`;
+            }
+
+            // SOBRESCRIBIR LAS FUNCIONES ORIGINALES DESPUÉS DE QUE SE CARGUEN
+            setTimeout(function() {
+                // Limpiar contenido existente
+                document.getElementById('mis-cursos').innerHTML = '';
+                document.getElementById('recomendados').innerHTML = '';
+                document.getElementById('usuarios-similares').innerHTML = '';
+
+                // Sobrescribir las funciones globales
+                window.createCourseCard = createEnhancedCourseCard;
+                window.createUserCard = createEnhancedUserCard;
+
+                // Recargar los cursos con las nuevas funciones
+                if (typeof cargarCursos === 'function') {
+                    cargarCursos();
+                }
+
+                // Actualizar contadores
+                setTimeout(updateCounts, 500);
+            }, 500);
+
+        });
+    </script>
 </body>
 </html>

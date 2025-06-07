@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Creare</title>
+    <link rel="stylesheet" href="../static/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Inter:wght@400;600;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../static/images/logo.png" alt="logo creare" class="logo-modern">
+                <h1 class="brand-name">Creare</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="/feed" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Feed
+                </a>
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-user"></i>
+                    Mi Perfil
+                </a>
+                <a href="/logout" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Hero -->
+    <section class="profile-hero">
+        <div class="container-modern">
+            <div class="profile-header">
+                <div class="profile-avatar-section">
+                    <div class="profile-avatar">
+                        <img src="/placeholder.svg?height=120&width=120" alt="Avatar" id="userAvatar">
+                        <button class="avatar-edit-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="nombre-usuario" class="profile-name">Usuario</h1>
+                        <p class="profile-email">usuario@email.com</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="cursosCompletados">0</span>
+                                <span class="stat-label">Cursos Completados</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="horasEstudio">0</span>
+                                <span class="stat-label">Horas de Estudio</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="certificados">0</span>
+                                <span class="stat-label">Certificados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-secondary">
+                        <i class="fas fa-edit"></i>
+                        Editar Perfil
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-cog"></i>
+                        Configuración
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="profile-main">
+        <div class="container-modern">
+            <div class="profile-layout">
+                <!-- Left Column -->
+                <div class="profile-left">
+                    <!-- Progress Overview -->
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-chart-line"></i>
+                                Mi Progreso
+                            </h2>
+                        </div>
+                        <div class="card-content">
+                            <div class="progress-overview">
+                                <div class="progress-item">
+                                    <div class="progress-info">
+                                        <span class="progress-label">Nivel de Aprendizaje</span>
+                                        <span class="progress-value">Intermedio</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="progress-item">
+                                    <div class="progress-info">
+                                        <span class="progress-label">Racha de Estudio</span>
+                                        <span class="progress-value">7 días</span>
+                                    </div>
+                                    <div class="streak-indicator">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interests -->
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-heart"></i>
+                                Mis Intereses
+                            </h2>
+                            <button class="btn-edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div id="intereses" class="interests-tags"></div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-trophy"></i>
+                                Logros Recientes
+                            </h2>
+                        </div>
+                        <div class="card-content">
+                            <div class="achievements-grid">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h4>Primer Curso</h4>
+                                        <p>Completaste tu primer curso</p>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h4>Racha de 7 días</h4>
+                                        <p>Estudiaste 7 días seguidos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="profile-right">
+                    <!-- Current Courses -->
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-play-circle"></i>
+                                Cursos en Progreso
+                            </h2>
+                        </div>
+                        <div class="card-content">
+                            <div id="cursosEnProgreso" class="courses-list">
+                                <!-- Courses will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Completed Courses -->
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-check-circle"></i>
+                                Cursos Completados
+                            </h2>
+                        </div>
+                        <div class="card-content">
+                            <div id="cursos" class="courses-list">
+                                <!-- Completed courses will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Calendar -->
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <i class="fas fa-calendar-alt"></i>
+                                Actividad de Aprendizaje
+                            </h2>
+                        </div>
+                        <div class="card-content">
+                            <div class="activity-calendar">
+                                <div class="calendar-grid">
+                                    <!-- Calendar will be generated here -->
+                                </div>
+                                <div class="calendar-legend">
+                                    <span class="legend-item">
+                                        <div class="legend-color low"></div>
+                                        Menos
+                                    </span>
+                                    <span class="legend-item">
+                                        <div class="legend-color high"></div>
+                                        Más
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="mensaje" class="message-container"></div>
+
+    <script src="../static/js/perfil_usuario.js"></script>
+    <script>
+        // Mock data for demonstration
+        const mockInterests = ['Programación', 'Diseño', 'Marketing', 'Fotografía'];
+        
+        // Initialize interests
+        function loadInterests() {
+            const container = document.getElementById('intereses');
+            container.innerHTML = mockInterests.map(interest => 
+                `<span class="interest-tag">${interest}</span>`
+            ).join('');
+        }
+
+        // Load mock course data
+        function loadCourses() {
+            const progressContainer = document.getElementById('cursosEnProgreso');
+            const completedContainer = document.getElementById('cursos');
+            
+            // Mock courses in progress
+            progressContainer.innerHTML = `
+                <div class="course-item">
+                    <div class="course-thumbnail">
+                        <img src="/placeholder.svg?height=60&width=80" alt="Curso">
+                    </div>
+                    <div class="course-info">
+                        <h4>React Avanzado</h4>
+                        <p>Progreso: 65%</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <div class="course-thumbnail">
+                        <img src="/placeholder.svg?height=60&width=80" alt="Curso">
+                    </div>
+                    <div class="course-info">
+                        <h4>Diseño UX/UI</h4>
+                        <p>Progreso: 30%</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Mock completed courses
+            completedContainer.innerHTML = `
+                <div class="course-item completed">
+                    <div class="course-thumbnail">
+                        <img src="/placeholder.svg?height=60&width=80" alt="Curso">
+                        <div class="completion-badge">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="course-info">
+                        <h4>JavaScript Básico</h4>
+                        <p>Completado el 15 Mar 2024</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Generate activity calendar
+        function generateCalendar() {
+            const container = document.querySelector('.calendar-grid');
+            const today = new Date();
+            const startDate = new Date(today.getFullYear(), today.getMonth() - 3, 1);
+            
+            for (let i = 0; i < 90; i++) {
+                const date = new Date(startDate);
+                date.setDate(startDate.getDate() + i);
+                
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                
+                // Random activity level for demo
+                const activity = Math.random();
+                if (activity > 0.7) dayElement.classList.add('high');
+                else if (activity > 0.3) dayElement.classList.add('medium');
+                else if (activity > 0.1) dayElement.classList.add('low');
+                
+                dayElement.title = date.toLocaleDateString();
+                container.appendChild(dayElement);
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadInterests();
+            loadCourses();
+            generateCalendar();
+        });
+    </script>
+</body>
+</html>

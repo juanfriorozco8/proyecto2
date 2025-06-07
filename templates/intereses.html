@@ -1,36 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Intereses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tus Intereses - Creare</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Inter:wght@400;600;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
-<body>
-    <div class="container_interest">
-        <div class="header">
-            <div class="logo_header">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+<body class="interests-body">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" class="logo-modern">
+                <h1 class="brand-name">creare</h1>
             </div>
-            <h1 class="creare_header">creare</h1>
+            <div class="header-progress">
+                <span class="progress-text">Paso 2 de 3</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 66%"></div>
+                </div>
+            </div>
         </div>
-        <div class="centro">
-            <div class="intereses_box">
-                <form id="registrar_intereses">
+    </header>
 
-                    <div class="titulo_interest">
-                        <h1 class="select_interest">Selecciona tus intereses: </h1>
-                        <input class="next_interest" type="submit" value="Next -->">
+    <!-- Main Content -->
+    <main class="interests-main">
+        <div class="container-modern">
+            <div class="interests-container">
+                <!-- Header Section -->
+                <div class="interests-header">
+                    <div class="header-icon">
+                        <i class="fas fa-heart"></i>
                     </div>
-                    <hr>
-                    <div id="intereses"></div>
+                    <h1 class="interests-title">¿Qué te apasiona?</h1>
+                    <p class="interests-subtitle">
+                        Selecciona tus áreas de interés para recibir recomendaciones personalizadas
+                    </p>
+                    <div class="selection-counter">
+                        <span id="selectedCount">0</span> de <span id="totalCount">0</span> seleccionados
+                    </div>
+                </div>
+
+                <!-- Interests Form -->
+                <form id="registrar_intereses" class="interests-form">
+                    <div class="interests-grid" id="intereses">
+                        <!-- Los intereses se cargarán dinámicamente -->
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="selectRecommended()">
+                            <i class="fas fa-magic"></i>
+                            Seleccionar Recomendados
+                        </button>
+                        <button type="button" class="btn-secondary" onclick="clearAll()">
+                            <i class="fas fa-times"></i>
+                            Limpiar Todo
+                        </button>
+                        <button type="submit" class="btn-primary" id="continueBtn" disabled>
+                            <span class="btn-text">Continuar</span>
+                            <i class="fas fa-arrow-right btn-icon"></i>
+                        </button>
+                    </div>
                 </form>
+
+                <div id="mensaje" class="message-container"></div>
             </div>
         </div>
-        <p id="mensaje"></p>
-    </div>
-    <script src="{{ url_for('static', filename='js/intereses.js') }}"></script>
-</body>
+    </main>
 
+    <!-- Floating Help -->
+    <div class="floating-help">
+        <button class="help-btn" onclick="toggleHelp()">
+            <i class="fas fa-question"></i>
+        </button>
+        <div class="help-content" id="helpContent">
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Selecciona al menos 3 intereses</li>
+                <li>Solo se mostrarán intereses con cursos disponibles</li>
+                <li>Puedes cambiar tus intereses más tarde</li>
+                <li>Más intereses = mejores recomendaciones</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Datos de intereses - estos deberían coincidir con las etiquetas en tu base de datos
+        const interesesData = [
+            { id: 'Programación', name: 'Programación', icon: 'fas fa-code', color: '#3498db', recommended: true },
+            { id: 'Diseño Gráfico', name: 'Diseño Gráfico', icon: 'fas fa-palette', color: '#e74c3c', recommended: true },
+            { id: 'Marketing Digital', name: 'Marketing Digital', icon: 'fas fa-bullhorn', color: '#f39c12', recommended: false },
+            { id: 'Fotografía', name: 'Fotografía', icon: 'fas fa-camera', color: '#9b59b6', recommended: true },
+            { id: 'Música', name: 'Música', icon: 'fas fa-music', color: '#1abc9c', recommended: false },
+            { id: 'Idiomas', name: 'Idiomas', icon: 'fas fa-globe', color: '#34495e', recommended: false },
+            { id: 'Cocina', name: 'Cocina', icon: 'fas fa-utensils', color: '#e67e22', recommended: false },
+            { id: 'Fitness', name: 'Fitness', icon: 'fas fa-dumbbell', color: '#27ae60', recommended: false },
+            { id: 'Negocios', name: 'Negocios', icon: 'fas fa-briefcase', color: '#2c3e50', recommended: true },
+            { id: 'Arte', name: 'Arte', icon: 'fas fa-paint-brush', color: '#8e44ad', recommended: false },
+            { id: 'Ciencia', name: 'Ciencia', icon: 'fas fa-flask', color: '#16a085', recommended: false },
+            { id: 'Tecnología', name: 'Tecnología', icon: 'fas fa-laptop', color: '#2980b9', recommended: true }
+        ];
+
+        let selectedInterests = [];
+
+        // Initialize interests
+        function initializeInterests() {
+            const container = document.getElementById('intereses');
+            const totalCount = document.getElementById('totalCount');
+            
+            totalCount.textContent = interesesData.length;
+            
+            interesesData.forEach(interest => {
+                const interestCard = createInterestCard(interest);
+                container.appendChild(interestCard);
+            });
+        }
+
+        function createInterestCard(interest) {
+            const card = document.createElement('div');
+            card.className = 'interest-card';
+            card.dataset.interestId = interest.id;
+            
+            card.innerHTML = `
+                <input type="checkbox" id="${interest.id}" name="intereses" value="${interest.id}">
+                <label for="${interest.id}" class="interest-label">
+                    <div class="interest-icon" style="background-color: ${interest.color}">
+                        <i class="${interest.icon}"></i>
+                    </div>
+                    <h3 class="interest-name">${interest.name}</h3>
+                    ${interest.recommended ? '<span class="recommended-badge">Recomendado</span>' : ''}
+                </label>
+            `;
+
+            const checkbox = card.querySelector('input');
+            checkbox.addEventListener('change', function() {
+                updateSelection(interest.id, this.checked);
+                updateCard(card, this.checked);
+            });
+
+            return card;
+        }
+
+        function updateSelection(interestId, isSelected) {
+            if (isSelected) {
+                selectedInterests.push(interestId);
+            } else {
+                selectedInterests = selectedInterests.filter(id => id !== interestId);
+            }
+            
+            updateCounter();
+            updateContinueButton();
+        }
+
+        function updateCard(card, isSelected) {
+            if (isSelected) {
+                card.classList.add('selected');
+            } else {
+                card.classList.remove('selected');
+            }
+        }
+
+        function updateCounter() {
+            document.getElementById('selectedCount').textContent = selectedInterests.length;
+        }
+
+        function updateContinueButton() {
+            const continueBtn = document.getElementById('continueBtn');
+            continueBtn.disabled = selectedInterests.length < 3;
+        }
+
+        function selectRecommended() {
+            interesesData.forEach(interest => {
+                if (interest.recommended) {
+                    const checkbox = document.getElementById(interest.id);
+                    const card = checkbox.closest('.interest-card');
+                    
+                    if (!checkbox.checked) {
+                        checkbox.checked = true;
+                        updateSelection(interest.id, true);
+                        updateCard(card, true);
+                    }
+                }
+            });
+        }
+
+        function clearAll() {
+            selectedInterests = [];
+            document.querySelectorAll('input[name="intereses"]').forEach(checkbox => {
+                checkbox.checked = false;
+                const card = checkbox.closest('.interest-card');
+                updateCard(card, false);
+            });
+            updateCounter();
+            updateContinueButton();
+        }
+
+        function toggleHelp() {
+            const helpContent = document.getElementById('helpContent');
+            helpContent.classList.toggle('show');
+        }
+
+        // Handle form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeInterests();
+            
+            const form = document.getElementById('registrar_intereses');
+            const mensaje = document.getElementById('mensaje');
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Validar que se hayan seleccionado al menos 3 intereses
+                if (selectedInterests.length < 3) {
+                    mensaje.innerHTML = '<div class="alert alert-error">Por favor, selecciona al menos 3 intereses.</div>';
+                    return;
+                }
+
+                // Mostrar estado de carga
+                const continueBtn = document.getElementById('continueBtn');
+                const originalText = continueBtn.innerHTML;
+                continueBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Guardando...';
+                continueBtn.disabled = true;
+
+                try {
+                    const response = await fetch('/api/intereses', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            intereses: selectedInterests
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        // Construir mensaje de éxito detallado
+                        let mensajeExito = `¡Se guardaron ${data.intereses_guardados.length} intereses exitosamente! 🎉`;
+                        
+                        if (data.intereses_no_encontrados && data.intereses_no_encontrados.length > 0) {
+                            mensajeExito += `<br><small>Nota: Algunos intereses no tienen cursos disponibles aún: ${data.intereses_no_encontrados.join(', ')}</small>`;
+                        }
+                        
+                        mensaje.innerHTML = `<div class="alert alert-success">${mensajeExito}</div>`;
+                        
+                        // Mostrar alerta con información detallada
+                        let alertMessage = `¡Tus intereses han sido guardados exitosamente!\n\n`;
+                        alertMessage += `Intereses guardados: ${data.intereses_guardados.length}\n`;
+                        
+                        if (data.intereses_guardados.length > 0) {
+                            alertMessage += `\nCursos disponibles para:\n`;
+                            data.intereses_guardados.forEach(interes => {
+                                alertMessage += `• ${interes.etiqueta}: ${interes.curso}\n`;
+                            });
+                        }
+                        
+                        if (data.intereses_no_encontrados && data.intereses_no_encontrados.length > 0) {
+                            alertMessage += `\nIntereses sin cursos disponibles: ${data.intereses_no_encontrados.join(', ')}`;
+                        }
+                        
+                        alertMessage += `\n\nTe redirigiremos al feed para ver tus recomendaciones personalizadas.`;
+                        
+                        alert(alertMessage);
+                        
+                        // Redirigir al feed después de 2 segundos
+                        setTimeout(() => {
+                            window.location.href = '/feed';
+                        }, 2000);
+                        
+                    } else {
+                        throw new Error(data.error || 'Error al guardar los intereses');
+                    }
+
+                } catch (error) {
+                    console.error('Error:', error);
+                    mensaje.innerHTML = '<div class="alert alert-error">Error al guardar los intereses. Verifica que los intereses seleccionados tengan cursos disponibles.</div>';
+                    
+                    // Restaurar botón
+                    continueBtn.innerHTML = originalText;
+                    continueBtn.disabled = selectedInterests.length < 3;
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        /* Estilos para los mensajes de alerta */
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            font-weight: 500;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .alert small {
+            display: block;
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+    </style>
+</body>
 </html>
